@@ -56,7 +56,15 @@ export default function App() {
 }
 ```
 * RN offers:
-* no ir very little cross styling of components. we need to style manualy per platform
+* no to very little cross styling of components. we need to style manualy per platform
 * only basic set of prebuilt components
 * RN offers tools for responsive design but not out-of-box
 * iOnic takes a web app and wraps it as a native app. low performance
+* we can develop for iOS on a windows/linux mahine using expo app
+* to run our RN app on Android emulator expo.io => docs => managed workflow => android studio emulator
+* we follow the instructions (in our case we have it setup from previous course)
+* in expo web ide (http://localhost:19002/) we select Run on Android device/emulator with emulator running and expo app gets installed on emulator running our app
+
+## Section 2: Diving into the Basics [COURSE GOALS APP]
+
+* 
