@@ -82,4 +82,21 @@ export default function App() {
 * Button tag in Rn takes title as prop `<Button title="ADD"/>`
 * we do styling in stylesheet object or inline `<View style={{padding: 30 }}>`
 * we use JS like syntax for styling `style={{borderBottomColor: 'blue', borderBottomWidth: 1}}`
-* RN uses Flexbox
+* RN uses Flexbox by default in <View> and organizes children in a column direction (top-bottom) 
+* in Web dev the default in Flexbox is row direction
+* every box in Flexbox is as wide and high as its child needs it to be
+* setting height and wdth in parent contaienr of boxes has effect only on cross axes
+* axes can be reversed.
+* justify content alligns on main axes and align-itmes on cross axis
+* flexbox children aka 'boxes' have flex property. if set 1 `flex: 1` 1st item takes up as much space as it can along main axes get leaving the minimum space for other boxes given the configuration
+* flex number is a proportion of available space.
+* stylesheet objects are conventient for heavy styling. StyleSheet is offered by RN. it also offers validation by RN
+```
+ const styles = StyleSheet.create({
+  screen: {
+    padding: 50
+  }
+});
+```
+* we can nest multiple object per tag and use them `<View style={styles.screen}>`
+* TIP: use format document command in VS Code to autoindent source file
