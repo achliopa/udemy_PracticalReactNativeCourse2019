@@ -63,8 +63,23 @@ export default function App() {
 * we can develop for iOS on a windows/linux mahine using expo app
 * to run our RN app on Android emulator expo.io => docs => managed workflow => android studio emulator
 * we follow the instructions (in our case we have it setup from previous course)
-* in expo web ide (http://localhost:19002/) we select Run on Android device/emulator with emulator running and expo app gets installed on emulator running our app
+* in expo web dev tools (http://localhost:19002/) we select Run on Android device/emulator with emulator running and expo app gets installed on emulator running our app
+* [React native Docs](https://facebook.github.io/react-native/docs/getting-started)
 
 ## Section 2: Diving into the Basics [COURSE GOALS APP]
 
-* 
+* use RN core components where possible
+* no CSS. JS for stylining CSS style but compiled to native.  
+  * inline styles
+  * StyleSheet objects
+* make a new expo app `expo init rn-complete-guide` using the blank template and name it 'RN Guide'
+* we run with `npm start` or if on cloud9 we follow the instructions above
+* we will build a TODO list app. an input field a button and a list of items we create. 
+* taping on list items will delete them. 
+* a variation will be to render a modal on button press to enter the input text
+* text in RN must always be in <Text>
+* RN offers no more than 10 core components
+* Button tag in Rn takes title as prop `<Button title="ADD"/>`
+* we do styling in stylesheet object or inline `<View style={{padding: 30 }}>`
+* we use JS like syntax for styling `style={{borderBottomColor: 'blue', borderBottomWidth: 1}}`
+* RN uses Flexbox
