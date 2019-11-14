@@ -115,3 +115,10 @@ export default function App() {
       )}>
 ```
 * flatlist expects list of objects and adds unique keys to list items. if not we have to pass them explicitly with keyExtractor prop
+* to pass arguments into callbacks without running them we can wrap them in anonymous arrow functions or use bind `props.onAddGoal.bind(this, enteredGoal)`
+* we can wrap any component i RN (eg View) with <Touchable> and make it touchable (onPress). touchable is abstract. we need to use one of its concrete classes like TouchableOpacity and others:
+  * TouchableNative (only android)
+  * TouchableHighlight
+  * TouchableNoFeedback
+  * TouchableOpacity
+* 
