@@ -100,3 +100,18 @@ export default function App() {
 ```
 * we can nest multiple object per tag and use them `<View style={styles.screen}>`
 * TIP: use format document command in VS Code to autoindent source file
+* RN supports hooks. we use useState()
+* console.log is supported in RN and outputs on dev tools and terminal
+* View offers more styling than Text
+* in ios scrolable view if it eceeds boundaries is auto. in android no. we need ScrollView
+* only part wrapped with scrollview is scrollable and scrollbar appears at this components boundary
+* FlatList is a scrolled list that renders only whats viewd to save BW.good for very long lists
+* In FlatList we pass in the list and a callback to do the actual render of each element (no map(0 needed))
+```
+      <FlatList data={courseGoals} renderItem={itemData => (
+          <View style={styles.listItem}>
+            <Text>{itemData.item}</Text>
+          </View>      
+      )}>
+```
+* flatlist expects list of objects and adds unique keys to list items. if not we have to pass them explicitly with keyExtractor prop
