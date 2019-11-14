@@ -121,4 +121,9 @@ export default function App() {
   * TouchableHighlight
   * TouchableNoFeedback
   * TouchableOpacity
+* Rn offers a Modal Component for modals. modal has visible prop and animationType for slide in animation
+* View takes only the necessary space the children require to render.flex 1 maximazes to take available space
+
+## Section 3: Debugging React Native Apps
+
 * 
