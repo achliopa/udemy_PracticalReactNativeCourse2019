@@ -126,4 +126,4 @@ export default function App() {
 
 ## Section 3: Debugging React Native Apps
 
-* 
+* in expo apps on real devices shake the device to fire up debugger
