@@ -127,3 +127,17 @@ export default function App() {
 ## Section 3: Debugging React Native Apps
 
 * in expo apps on real devices shake the device to fire up debugger
+* debug mode on emulators: ios ctrl+d , android ctrl+m => degug remotly. it opens chrome debugger (in lan mode is ok in tunnel mode is SLOW) =>open chrome dev tools. we get console log. in sources we have a debugger-ui folder where have the surce files where we can add breakpoints
+* in debug mode we can:
+  * reload the app
+  * control reloading
+  * see perf monitor
+  * toggle inspector to see dev tools on expo app like in chrome
+* better than inspector is [RN debugger](https://github.com/jhen0409/react-native-debugger) and install it in our OS
+* to use it we have to enable remoteJS debuging in the app. it rplaces chrome debugger. we have also react tools or debug network reqs
+* [Expo Debugging Docs](https://docs.expo.io/versions/v34.0.0/workflow/debugging/)
+* [Chrome Dev Tools Docs](https://developers.google.com/web/tools/chrome-devtools/)
+
+## Section 4: Components, Styling, Layouts - Building Real Apps [GUESS A NUMBER APP]
+
+* 
