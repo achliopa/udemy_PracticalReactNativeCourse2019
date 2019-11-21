@@ -142,3 +142,4 @@ export default function App() {
 
 * we make a new app `expo init rn-number-app`
 * shadow styles are supported in iOS but not on Android, we need to add 'elevation'
+* `<View style={{...styles.card, ...props.style}}>` props overwrite any common style attribute and both objects are merged to one
