@@ -141,4 +141,4 @@ export default function App() {
 ## Section 4: Components, Styling, Layouts - Building Real Apps [GUESS A NUMBER APP]
 
 * we make a new app `expo init rn-number-app`
-* we add a Header component
+* shadow styles are supported in iOS but not on Android, we need to add 'elevation'

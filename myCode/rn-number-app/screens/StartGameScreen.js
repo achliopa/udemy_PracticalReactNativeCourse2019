@@ -29,11 +29,6 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         paddingHorizontal: 15
     },
-    inputContainer: {
-        width: 300,
-        maxWidth: '80%',
-        alignItems: 'center'
-    },
     title: {
         fontSize: 20,
         marginVertical: 10
