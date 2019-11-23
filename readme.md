@@ -143,3 +143,15 @@ export default function App() {
 * we make a new app `expo init rn-number-app`
 * shadow styles are supported in iOS but not on Android, we need to add 'elevation'
 * `<View style={{...styles.card, ...props.style}}>` props overwrite any common style attribute and both objects are merged to one
+* spread and the props into child comp. `<TextInput {...props} style={{...styles.input, ...props.style }}/>` overriding what we want e.g style prop
+* numeric keyboard with decimal `keyboardType="numeric"` keyboard nodecimals `keyboardType="number-pad"` in android we need validator
+* replace anything that is not number with empty string (using regex) `inputText.replace(/[^0-9]/g, '')`
+* to be able to dismiss keyboard on press in iOS `<TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>`
+* setters of useStste hook operate on state on next render cycle
+* native Alert example
+```
+Alert.alert(
+                'Invalid number',
+                'Number has to be a value between 1 and 99',
+                [{text: 'Okay',style: 'destructive', onPress: resetInputHandler}]);
+```
