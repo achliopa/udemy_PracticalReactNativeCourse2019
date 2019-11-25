@@ -197,3 +197,6 @@ const fetchFonts = () => {
   
 ```
 * we can now use the fonts in styles `fontFamily: 'open-sans-bold'`
+* RN does not support cascading of styles
+* an option is to create a thin wrapper component to replace Text and style it. then use it instead
+* an alternative is in /constants to add a 'default-styles.js' file add some styling setting the fonts then use it in our code
