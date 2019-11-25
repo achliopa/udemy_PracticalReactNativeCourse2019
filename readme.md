@@ -141,7 +141,8 @@ export default function App() {
 ## Section 4: Components, Styling, Layouts - Building Real Apps [GUESS A NUMBER APP]
 
 * we make a new app `expo init rn-number-app`
-* shadow styles are supported in iOS but not on Android, we need to add 'elevation'
+* shadow styles are supported in iOS but not 
+* on Android, we need to add 'elevation'
 * `<View style={{...styles.card, ...props.style}}>` props overwrite any common style attribute and both objects are merged to one
 * spread and the props into child comp. `<TextInput {...props} style={{...styles.input, ...props.style }}/>` overriding what we want e.g style prop
 * numeric keyboard with decimal `keyboardType="numeric"` keyboard nodecimals `keyboardType="number-pad"` in android we need validator
@@ -155,3 +156,44 @@ Alert.alert(
                 'Number has to be a value between 1 and 99',
                 [{text: 'Okay',style: 'destructive', onPress: resetInputHandler}]);
 ```
+* Hooks setters can be passed down as props to child components
+* to pass an input argument to a handler withough invoiking it we use bind `onPress={nextGuessHandler.bind(this,'lower')}`
+* ref Hook allows it allows to create an object and bind it as input to JSX. it also allows to create a valu ethat survives component rerender a.k.a Persistence
+* how to use it  define it: `const currentLow = useRef(1);` set its current val `currentLow.current = currentGuess; ` 
+* the difference with state is it does not cause rerender
+* effect prop is calld at render if the values in the array passed as second argument  change
+```
+    useEffect(()=>{
+        if(currentGuess === userChoice) {
+            onGameOver(rounds);
+        }
+    },[currentGuess, userChoice, onGameOver]);
+```
+* to add custom fonts we add a /fonts folder in /assets folder and store the .ttf files (get them from google fonts eg)
+* to be able to use them in our App.js file we add `import * as Font from 'expo-font';`
+* expo-fonts should be installed in an expo project. to be sure we run `expo install expo-font` or `npm install --save expo-font`
+* wxpo-install is preferred for expo packages as it installs the correct version for the version of expo we use in the project
+* then we define an font load method (async) to call in our code
+```
+const fetchFonts = () => {
+  return Font.loadAsync({
+    'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
+    'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf')
+  });
+};
+```
+* we need to make sure that the promise resolves before rendering anything using the fonts. 
+* we use AppLoading from expo `import { AppLoading } from 'expo';`
+* it provides a splash screen to prolong load untill prep code resolves. we use hooks state with a flag
+* we use the Apploading passing the async function and a callback to be run when the promise resolves
+```
+  if(!dataLoaded) {
+    return <AppLoading 
+      startAsync={fetchFonts} 
+      onFinish={() => setDataLoaded(true)}
+      onError={(err)=>console.log(err)}
+    />;
+  }
+  
+```
+* we can now use the fonts in styles `fontFamily: 'open-sans-bold'`
