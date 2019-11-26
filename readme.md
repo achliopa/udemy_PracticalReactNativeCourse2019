@@ -207,3 +207,8 @@ const fetchFonts = () => {
 * for network images we pass in an object as source `source={{uri: 'https://www.geeky-gadgets.com/wp-content/uploads/2010/10/Everest-Summit.jpg'}}`
 * with local images RN gets width and height. for net images we need to set it as RN doesnt know it at render time (async).
 * net images fade in (def 300ms) we can set it as prop `fadeDuration={500}`
+* We can wrap <Text> in <Text> for different styling. we get style inheritance
+* be careful when nesting VIew in Text
+* Text wrpas into new line
+* You can avoid wrapping by setting the numberOfLines prop, possibly combined with ellipsizeMode.
+* A custonm Button can be made using  View, Text, Touchable
