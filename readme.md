@@ -200,3 +200,10 @@ const fetchFonts = () => {
 * RN does not support cascading of styles
 * an option is to create a thin wrapper component to replace Text and style it. then use it instead
 * an alternative is in /constants to add a 'default-styles.js' file add some styling setting the fonts then use it in our code
+* RN has <Image> component to show images. we can use local images in our app bundle or from the net
+* for local we use the /assets folder and import them  `<Image source={require('../assets/success.png')} />`
+* we need to style it. by default it is full screen. we style it. we also need to set its aspect ratio using the 'resizeMode' prop
+* wrappper views can not use tha width of their child if its set to relative (in %)
+* for network images we pass in an object as source `source={{uri: 'https://www.geeky-gadgets.com/wp-content/uploads/2010/10/Everest-Summit.jpg'}}`
+* with local images RN gets width and height. for net images we need to set it as RN doesnt know it at render time (async).
+* net images fade in (def 300ms) we can set it as prop `fadeDuration={500}`
