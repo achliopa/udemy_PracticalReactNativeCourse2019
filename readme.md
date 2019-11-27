@@ -217,4 +217,13 @@ const fetchFonts = () => {
 * Expo offers prebuilt UI packages with ready prestyled components [UI comp libs](https://docs.expo.io/versions/latest/guides/userinterface/)
 * we will store history of guesses in react hooks state making in an array
 * be carreful when using state vars in code as they get updated in next render cycle (prefer temps for immediate action)
-* to style a list properly we need to wrap it to a View and style the View
+* to style a list properly we need to wrap it to a View and style the View. 
+* in Androind to have a scrollable list the wrapping View must have flex:1 in styles
+* setting a width in list items puts them on left. we canuse flexbox
+* styling ScrollView and FlatList we need to use a special prop `<ScrollView contentContainerStyle={styles.list}>`
+* to make list increment bottom up we use
+```
+        justifyContent: 'flex-end',
+        flexGrow: 1
+```
+* use FlatList for large lists. it does incremental Render
