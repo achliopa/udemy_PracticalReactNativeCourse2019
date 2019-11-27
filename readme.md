@@ -212,3 +212,9 @@ const fetchFonts = () => {
 * Text wrpas into new line
 * You can avoid wrapping by setting the numberOfLines prop, possibly combined with ellipsizeMode.
 * A custonm Button can be made using  View, Text, Touchable
+* expo offers built in icon sets. we first need to iport the set e.g `import { Ionicons } from '@expo/vector-icons';`
+* we then use them as components with name `<Ionicons name="md-remove" size={24} color="white" />`
+* Expo offers prebuilt UI packages with ready prestyled components [UI comp libs](https://docs.expo.io/versions/latest/guides/userinterface/)
+* we will store history of guesses in react hooks state making in an array
+* be carreful when using state vars in code as they get updated in next render cycle (prefer temps for immediate action)
+* to style a list properly we need to wrap it to a View and style the View
