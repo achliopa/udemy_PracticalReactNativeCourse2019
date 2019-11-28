@@ -226,4 +226,17 @@ const fetchFonts = () => {
         justifyContent: 'flex-end',
         flexGrow: 1
 ```
-* use FlatList for large lists. it does incremental Render
+* use FlatList for large lists. it does incremental Render andtakes the aray as argument and a callback to render the list item
+```
+                <FlatList 
+                    keyExtractor={(item) => item} 
+                    data={pastGuesses} 
+                    renderItem={renderListItem.bind(this, pastGuesses.length )}
+                    contentContainerStyle={styles.list}
+                />
+```
+* to fix render issues limit container with and give list a full width
+
+## Section 5: Responsive & Adaptive User Interfaces and Apps
+
+* 
