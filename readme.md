@@ -239,4 +239,4 @@ const fetchFonts = () => {
 
 ## Section 5: Responsive & Adaptive User Interfaces and Apps
 
-* 
+* create a small virtual device with emulator to test
