@@ -240,3 +240,38 @@ const fetchFonts = () => {
 ## Section 5: Responsive & Adaptive User Interfaces and Apps
 
 * create a small virtual device with emulator to test
+* play with styling rules so that min is not that smal for small devices (set a hard limit)
+```
+        width: '80%',
+        minWidth: 300,
+        maxWidth: '95%',
+```
+* in cases where % is not enough we use Dimensions from RN `width: Dimensions.get('window').width / 3`
+* we can do conditional styling in StyleSheet `marginTop: Dimensions.get('window').height > 600 ? 20 : 10,` if checks can be done anywhere we write JS
+* in app.json  we can config orientation of the app, "default" means both orientations allowed 
+* wrapping our view with RN KeyboardAvoidingView makes sure Keyboard will never cover our input view `<KeyboardAvoidingView behavior="position"> `
+* if we set styling based on Dimensions our app breaks when we rotate as dimensions are clculated only when app starts
+* if we want syling to adapt to orientation we need to manage it in state, we also need a handler and to register the handler to the dimension change event
+```
+    const [buttonWidth, setButtonWidth] = useState(Dimensions.get('window').width / 4);
+
+    const updateLayout = () => {
+        setButtonWidth(Dimensions.get('window').width / 3)
+    }
+
+    Dimensions.addEventListener('change', updateLayout);
+```
+* this code pollutes mem with listeres in any change event. we  can use useEffect hook to add handler and remove th old
+```
+useEffect(() => {
+        const updateLayout = () => {
+            setButtonWidth(Dimensions.get('window').width / 3)
+        }
+
+        Dimensions.addEventListener('change', updateLayout);
+
+        return () => {
+            Dimensions.removeEventListener('change',updateLayout);
+        };
+    });
+```
