@@ -8,24 +8,24 @@ import MainButton from '../components/MainButton';
 
 const GameOverScreen = props => {
     return (
-        <ScrollView>
-            <View style={styles.screen}>
-                <TitleText>The Game is Over</TitleText>
-                <View style={styles.imageContainer}>
-                    <Image 
-                        source={require('../assets/success.png')}
-                        // source={{uri: 'https://www.geeky-gadgets.com/wp-content/uploads/2010/10/Everest-Summit.jpg'}}
-                        style={styles.image} 
-                        resizeMode="cover"
-                        fadeDuration={500}
-                    />
+            <ScrollView>
+                <View style={styles.screen}>
+                    <TitleText>The Game is Over</TitleText>
+                    <View style={styles.imageContainer}>
+                        <Image 
+                            source={require('../assets/success.png')}
+                            // source={{uri: 'https://www.geeky-gadgets.com/wp-content/uploads/2010/10/Everest-Summit.jpg'}}
+                            style={styles.image} 
+                            resizeMode="cover"
+                            fadeDuration={500}
+                        />
+                    </View>
+                    <View style={styles.resultContainer}>
+                        <BodyText style={{ textAlign: 'center'}}>Your phone needed <Text style={styles.highlight}>{props.roundsNumber}</Text> rounds to guess number <Text style={styles.highlight}>{props.userNumber}</Text></BodyText>
+                    </View>
+                    <MainButton onPress={props.onRestart}>NEW GAME</MainButton>
                 </View>
-                <View style={styles.resultContainer}>
-                    <BodyText style={{ textAlign: 'center'}}>Your phone needed <Text style={styles.highlight}>{props.roundsNumber}</Text> rounds to guess number <Text style={styles.highlight}>{props.userNumber}</Text></BodyText>
-                </View>
-                <MainButton onPress={props.onRestart}>NEW GAME</MainButton>
-            </View>
-        </ScrollView>
+            </ScrollView>
     );
 }
 
@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
     screen: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingVertical: 10 
     },
     imageContainer: {
         width: Dimensions.get('window').width * 0.7,

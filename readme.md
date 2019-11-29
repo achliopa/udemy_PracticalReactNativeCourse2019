@@ -275,3 +275,26 @@ useEffect(() => {
         };
     });
 ```
+* in expo apps we can use the ScreenOrientation object for adaptive design. it detects screen orientation and can lock it in runtime
+* e.g to lock it `ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT);`
+* with screenlock we listen for dimension changes. with screenorienatation we query screen orientation
+* RN offers Platform object to query the platform our app runs on. `color: Platform.OS === "ios" ? Colors.primary : 'white',`
+* platform allows us to select objects or stylesheets based on OS `<View style={{...styles.headerBase, ...Platform.select({ios: styles.headerIos, android: styles.headerAndroid})}}>`
+* RN offers the TouchableNativeFeedback for native feel on touchables. we can use Platfrom and JSX to select proper native comp
+```
+let ButtonComponent = TouchableOpacity;
+    
+    if (Platform.OS === "android" && Platform.Version >= 21) {
+        ButtonComponent = TouchableNativeFeedback;
+    }
+```
+* we can import OS specific files in our code. e.g 'MainButton.ios.js' and 'MainButton.android.js' but we import without os spec `import MainButton from '../components/MainButton';`as RN selects the appropriate at build time
+* modern devices have notches and not a pure rectangular real estate. 
+* RN offers SafeAreaView comp for this purpose. we wrap our JSX with it to protect. good practice is to wrap the topmost view
+* safeareaview is not needed if we use navigation as that lib takes care of it
+* [Dimensions API](https://facebook.github.io/react-native/docs/dimensions#docsNav)
+* [Platform-specific Code](https://facebook.github.io/react-native/docs/platform-specific-code)
+
+## Section 6: Navigation with React Navigation [THE MEALS APP]
+
+* 

@@ -1,6 +1,7 @@
 import React, { useState,  useRef, useEffect } from 'react';
 import {View,Text,StyleSheet,Alert, FlatList, Dimensions} from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { ScreenOrientation } from 'expo';
 
 import NumberContainer from '../components/NumberContainer';
 import Card from '../components/Card';
@@ -31,6 +32,9 @@ const renderListItem = (listLength, itemData) => {
 };
 
 const GameScreen = props => {
+    
+    //ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT);
+    
     const initialGuess = generateRandomBetween(1,100,props.userChoice);
     const [currentGuess, setCurrentGuess] = useState(initialGuess);
     const [pastGuesses,setPastGuesses] = useState([initialGuess.toString()]);
