@@ -334,3 +334,7 @@ const MealsNavigator = createStackNavigator({
 ```
 * we see animation and also the back button in header
 * `props.navigation.navigate('CategoryMeals')` is also valid
+* instead of navigate() i can use  `.push('RouteName')` with push i can navigate to the same screen i am in. (e.g same screen different content)
+* to programmaticaly go back `props.navigation.goBack();` pop() also goes to previous screen on stack
+* `props.navigation.popToTop();` takes us to the topmost screen in the stack
+* `props.navigation.replace( 'CategoryMeals')` replace the screen in the stack. (no animation, not added to the stack). we use it when we dont want to go back
