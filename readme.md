@@ -297,4 +297,40 @@ let ButtonComponent = TouchableOpacity;
 
 ## Section 6: Navigation with React Navigation [THE MEALS APP]
 
-* 
+* in web apps routing in react is based on urls. in native we have no urls
+*  in native apps we usually have tabs or stacks of pages
+* our lib of choice is [react-navigation](https://reactnavigation.org/) `npm install --save react-navigation`
+* for expo projects we need to install dependencies `expo install react-native-gesture-handler react-native-reanimated`
+* we add a new folder in our project /navigation and add 'MealsNavigation.js'
+* in react-navigation v4 and up we need to import specific navigators separately
+```
+npm install --save react-navigation-stack react-navigation-drawer react-navigation-tabs
+```
+* and then import them in the files we use them
+```
+import { createStackNavigator } from 'react-navigation-stack';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
+import { createDrawerNavigator } from 'react-navigation-drawer';
+```
+* in MealsNavigator we use stack navigator
+* we import it `import { createStackNavigator } from 'react-navigation-stack';`
+* and instantiate it as a component passing in a cofig object with the screens ref as attibutes (router style)
+```
+const MealsNavigator = createStackNavigator({
+    Categories: CategoriesScreen,
+    CategoryMeals: CategoryMealsScreen,
+    MealDetail: MealDetailScreen
+});
+```
+* to use it in JSX we need to wrap it in an app container `export default createAppContainer(MealsNavigator);`
+* we import app container from react-navigation `import { createAppContainer } from 'react-navigation';`
+* we import it and use it in App.js. we get first Screen on top render and a menu for free
+* every Component rendered in Navigator gets a navigation prop object with a bunch of methods (like pop and push)
+* we use navigate passing in the defined route name  in a button press callback
+```
+ <Button title="Go to Meals" onPress={()=>{
+                props.navigation.navigate({routeName: 'CategoryMeals'})
+            }}/>
+```
+* we see animation and also the back button in header
+* `props.navigation.navigate('CategoryMeals')` is also valid
