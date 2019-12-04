@@ -1,36 +1,38 @@
 import React from 'react';
-import { View, Text,TouchableOpacity, FlatList, StyleSheet, Platform } from 'react-native';
+import {  FlatList, StyleSheet } from 'react-native';
 
 import { CATEGORIES } from '../data/dummy-data';
-import Colors from '../constants/Colors';
-
+import CategoryGridTile from '../components/CategoryGridTile';
 const CategoriesScreen = props => {
     
     const renderGridItem = (itemData) => {
         return (
-            <TouchableOpacity onPress={()=>{
-                props.navigation.navigate({routeName: 'CategoryMeals'});
-            }}>
-            <View style={styles.gridItem}>
-                <Text>
-                    {itemData.item.title}
-                </Text>
-            </View>
-            </TouchableOpacity>
+            <CategoryGridTile 
+                title={itemData.item.title} 
+                color={itemData.item.color}
+                onSelect={() => {
+                    props.navigation.navigate({
+                        routeName: 'CategoryMeals', params: {
+                            categoryId: itemData.item.id
+                        }
+                    });
+                }}
+            />
         );
     };
 
     return (
-        <FlatList keyExtractor={(item,index) => item.id} data={CATEGORIES} numColumns={2} renderItem={renderGridItem}/>
+        <FlatList 
+            keyExtractor={(item,index) => item.id} 
+            data={CATEGORIES} 
+            numColumns={2} 
+            renderItem={renderGridItem}
+        />
     );
 };
 
 CategoriesScreen.navigationOptions = {
-    headerTitle: 'Meal Categories',
-    headerStyle: {
-        backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : ''
-    },
-    headerTintColor:  Platform.OS === 'android' ? 'white' : Colors.primaryColor
+    headerTitle: 'Meal Categories'
 };
 
 const styles = StyleSheet.create({
@@ -38,11 +40,6 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center'
-    },
-    gridItem: {
-        flex: 1,
-        margin: 15,
-        height: 150
     }
 });
 

@@ -348,3 +348,39 @@ CategoriesScreen.navigationOptions = {
     headerTitle: 'Meal Categories'
 };
 ```
+* we can pass in additional prameters to the component we navigate to with react navigation as an object
+```
+ props.navigation.navigate({routeName: 'CategoryMeals', params: {
+                    categoryId: itemData.item.id
+                }});
+```
+* alternate syntax `.navigate('CategoryMeals',{categoryId: itemData.item.id})`
+* in the invoked component we can access the param value as `props.navigation.getParam('categpryId)` 
+* to dynamicaly set navigationOptions such as title per instance we use a function which gets the navigation object. what we return from this method is the options object
+```
+CategoryMealsScreen.navigationOptions = (navigationData) => {
+
+    const catId = navigationData.navigation.getParam('categoryId');
+    const selectedCategory = CATEGORIES.find(cat => cat.id === catId);
+
+    return {
+        headerTitle: selectedCategory.title
+    };
+}
+```
+* if we have navigationOptions that are common for all screens (like styling of Header) we can apply them to the navigator
+* navigation options can be passed per route as an object
+```
+const MealsNavigator = createStackNavigator({
+    Categories: CategoriesScreen,
+    CategoryMeals: {
+      screen: CategoryMealsScreen,
+      navigationOptions: {
+        ....
+      }
+    },
+    MealDetail: MealDetailScreen
+});
+```
+* better yet we can pass a second cofig object to the createStackNavigator() using the `defaultNavigationoptions` param. specific options win over default. other options are available (mode, initialRoutename)
+* for efficiency we install `expo install react-native-screens` so that optimized screen comps are used under the hood. we import it `import { useScreens } from 'react-native-screens';` and use it at app start `useScreens();`
