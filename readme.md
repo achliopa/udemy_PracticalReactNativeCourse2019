@@ -338,3 +338,13 @@ const MealsNavigator = createStackNavigator({
 * to programmaticaly go back `props.navigation.goBack();` pop() also goes to previous screen on stack
 * `props.navigation.popToTop();` takes us to the topmost screen in the stack
 * `props.navigation.replace( 'CategoryMeals')` replace the screen in the stack. (no animation, not added to the stack). we use it when we dont want to go back
+* in /models folder we add a category js file for the data class and in /data we write the script that creates an array of object to pass in FlatList
+* FlatList supports multiple columns with the numColumns prop
+* props is not available outside the functional component
+* we can navigate propgramatically in onPress handlers
+* JS functions are objects and can have properties. react navigation uses the navigationOptions property we define e.g for header
+```
+CategoriesScreen.navigationOptions = {
+    headerTitle: 'Meal Categories'
+};
+```
