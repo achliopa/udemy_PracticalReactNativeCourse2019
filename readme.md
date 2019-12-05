@@ -384,3 +384,10 @@ const MealsNavigator = createStackNavigator({
 ```
 * better yet we can pass a second cofig object to the createStackNavigator() using the `defaultNavigationoptions` param. specific options win over default. other options are available (mode, initialRoutename)
 * for efficiency we install `expo install react-native-screens` so that optimized screen comps are used under the hood. we import it `import { useScreens } from 'react-native-screens';` and use it at app start `useScreens();`
+* RN offers ImageBackground to add backgroundimage. we wrap the content to put infron with it
+```
+<ImageBackground source={{uri: props.image}} style={styles.bgImage}>
+                            <Text style={styles.title}>{props.title}</Text>
+                        </ImageBackground>
+```
+* we should style text background color in a wrapping View and not on Text styling
