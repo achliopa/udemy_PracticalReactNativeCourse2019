@@ -391,3 +391,26 @@ const MealsNavigator = createStackNavigator({
                         </ImageBackground>
 ```
 * we should style text background color in a wrapping View and not on Text styling
+* we can add header buttons using the navigationOptions `headerRight: <Text>FAV!</Text>`
+* install a package `npm install --save react-navigation-header-buttons` to help with adding header buttons
+* we install `expo install @expo/vector-icons` and import Ionicons `import { Ionicons } from '@expo/vector-icons';` 
+* we create a custom HeaderButton importing `import { HeaderButton } from  'react-navigation-header-buttons';`
+* we add our styling and functionality
+```
+    return <HeaderButton 
+        {...props} 
+        IconComponent={Ionicons} 
+        iconSize={20}
+        color={Platform.OS === 'android' ? 'white' : Colors.primaryColor}
+    />;
+```
+* in the navigationOptions of the screen we we use <HeaderButtons> which we import from 'react-navigation-header-buttons'
+```
+        headerRight: (
+            <HeaderButtons HeaderButtonComponent={HeaderButton}>
+                <Item title="Favorite" iconName="ios-star" onPress={() => {
+                    console.log('Mark as Favorite');
+                }} />
+            </HeaderButtons>
+        )
+```
