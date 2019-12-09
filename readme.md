@@ -454,3 +454,48 @@ barStyle: {
 ```
 * above changes background color for Material tab
 * navigationOptions prop is not passes automaticaly to nested components
+* for side drawer menu navigation `import { createDrawerNavigation } from 'react-navigation-drawer'; `
+* menu icon does not show by default. we have to add it in navigationOptions of the screens it applies. we use headerButtons and we also need the navigation object at runtime to get the toggleDrawer() method. we use the arrow function pattern
+```
+CategoriesScreen.navigationOptions = (navData) => {
+    return {
+        headerTitle: 'Meal Categories',
+        headerLeft: <HeaderButtons HeaderButtonComponent={HeaderButton}>
+            <Item title="Menu" iconName="ios-menu" onPress={() => { 
+                navData.navigation.toggleDrawer();
+            }} />
+        </HeaderButtons>
+    };
+};
+```
+* we see 2 wayus to pass navigationoptions for screens when they are sused as pats of navigation. we see also how to style drawer
+```
+const FiltersNavigator = createStackNavigator({
+    Filters: FiltersScreen
+}, {
+    // navigationOptions: {
+    //     drawerLabel: 'Filters!!!'
+    // },
+    defaultNavigationOptions: defaultStackNavOptions
+});
+
+const MainNavigator = createDrawerNavigator({
+    MealsFavs: {
+        screen: MealsFavTabNavigator,
+        navigationOptions: {
+            drawerLabel: 'Meals'
+        }
+    },
+    Filters: FiltersNavigator
+},{
+    contentOptions: {
+        activeTintColor: Colors.accentColor,
+        labelStyle: {
+            fontFamily: 'open-sans-bold'
+        }
+    }
+});
+```
+* headerStyle styles the container, headerTitleStyle styles the header text, headerBackTitleStyle styles the secondary text
+* in tab navigation we set style as `labelStyle: {fontFamily: 'open-sans'},`
+* in material `tabBarlabel: Platform.OS === 'android' ? <Text style={{fontFamily: 'open-sans-bold'}}>Meals</Text> : 'Meals'`
