@@ -414,3 +414,43 @@ const MealsNavigator = createStackNavigator({
             </HeaderButtons>
         )
 ```
+* to setup bottom tab navigator:
+  * we import it `import { createBottomTabNavigator } from 'react-navigation-tabs';`
+  * we instantiate it: 
+```
+const MealsFavTabNavigator = createBottomTabNavigator({
+    Meals: MealsNavigator,
+    Favorites: FavoritesScreen
+});
+```
+* note that navigators are components and can be used in other navigators
+* we use the topmost navigator in the app
+* navigationOptions in the config (2nd argument) of a navigator only matter if that navigator is used inside another navigator
+* anytime we use JSX we need to import React
+* the pattern to add icons in tabs and color
+```
+    Favorites: {
+        screen: FavoritesScreen,
+        navigationOptions: {
+            tabBarLabel: 'Favorites!',
+            tabBarIcon: (tabInfo) => {
+                return <Ionicons name="ios-star" size={20} color={tabInfo.tintColor} />;
+            } 
+        }        
+    }
+},{
+    tabBarOptions: {
+        activeTintColor: Colors.accentColor
+    }
+```
+* we can use material tab navigator `expo install react-navigation-material-bottom-tabs`
+* we also need to install `expo install react-native-paper`
+* we import it `import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';`
+* we will use it only for android. material tab bar supprot shifting and works with tabBarColor option for effect
+```
+barStyle: {
+            backgroundColor: Colors.primaryColor
+        }
+```
+* above changes background color for Material tab
+* navigationOptions prop is not passes automaticaly to nested components
