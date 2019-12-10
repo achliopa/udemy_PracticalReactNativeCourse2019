@@ -585,6 +585,6 @@ const store = createStore(reducer, composeWithDevTools());
 ```
 * Important: Make sure you remove this code when building your app for production!
 
-### Section 8: Time to Practice - THE SHOP APP
+## Section 8: Time to Practice - THE SHOP APP
 
-* 
+## Section 9: Handling User Input
