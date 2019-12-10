@@ -499,3 +499,92 @@ const MainNavigator = createDrawerNavigator({
 * headerStyle styles the container, headerTitleStyle styles the header text, headerBackTitleStyle styles the secondary text
 * in tab navigation we set style as `labelStyle: {fontFamily: 'open-sans'},`
 * in material `tabBarlabel: Platform.OS === 'android' ? <Text style={{fontFamily: 'open-sans-bold'}}>Meals</Text> : 'Meals'`
+* RN offers Switch component that has a state
+```
+            <Switch
+                trackColor={{ true: Colors.primaryColor }}
+                thumbColor={Platform.OS === 'android' ? Colors.primaryColor : ''}
+                value={props.state}
+                onValueChange={props.onChange}
+            />
+```
+* to communicate between component state and navigationOptions we use params
+```
+    const saveFilters = useCallback(() => {
+        const appliedFilters = {
+            glutenFree: isGlutenFree,
+            lactoseFree: isLactoseFree,
+            vegan: isVegan,
+            vegeterian: isVegeterian
+        };
+
+        console.log(appliedFilters);
+    }, [isGlutenFree, isLactoseFree, isVegan, isVegeterian]);
+
+    useEffect(() => {
+        navigation.setParams({
+            save: saveFilters
+        });
+    }, [saveFilters]);
+```
+* we add the cakkback on press
+```
+        headerRight: <HeaderButtons HeaderButtonComponent={HeaderButton}>
+            <Item 
+                title="Save" 
+                iconName="ios-save" 
+                onPress={navData.navigation.getParam('save')} 
+            />
+```
+* be careful with inner functions ans useEffect()!!!! useEffect runs at each render  so if we call inner methods that cause rerender (infinite loop) useCallback() solves it
+
+## Section 7: State Management & Redux
+
+* we install redux and react-redux and add a /store folder and in there an actions and reducers folder
+* mapStateToProps Hooks equivalent `const availableMeals = useSelector(state => state.meals.filteredMeals);`
+* we use params to pass redux state in navigationOptions
+```
+    props.navigation.setParams({
+        mealTitle: selectedMeal.title
+    });
+```
+* the above causes infinite loop as it changes the props and causes rerender so the functional component runs again rerunning the method. we use useEffect(). only when the dependency changes it will rerun
+```
+    useEffect(()=>{
+        props.navigation.setParams({
+            mealTitle: selectedMeal.title
+        });
+    },[selectedMeal]);
+```
+* we use the title in the navigationOptions header settings but it has a delay. useEffect() runs after render time
+* a cheap solution is to forward the title from the previous component we are coming from in MealList together with id
+* pattern how to pass action creators into navigationOptions as header button handler
+```
+    const dispatch = useDispatch();
+
+    const toggleFavoriteHandler = useCallback(() => {
+        dispatch(toggleFavorite(mealId));
+    }, [dispatch,mealId]);
+
+    useEffect(()=>{
+        props.navigation.setParams({
+            toggleFav: toggleFavoriteHandler
+        });
+    }, [toggleFavoriteHandler]);
+```
+* You can debug Redux in React Native apps with help of the [React Native Debugger tool](https://github.com/jhen0409/react-native-debugger/blob/master/docs/redux-devtools-integration.md)
+    * Make sure you got the [React Native Debugger](https://github.com/jhen0409/react-native-debugger) installed 
+    * Enable JS Debugging in the running app (open development overlay via CTRL + M / CMD + M on Android devices, CMD + D on iOS devices)
+    * Install the [redux-devtools-extension package](https://www.npmjs.com/package/redux-devtools-extension) via `npm install --save-dev redux-devtools-extension` 
+    * Enable Redux debugging in your code:
+```
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+
+const store = createStore(reducer, composeWithDevTools());
+```
+* Important: Make sure you remove this code when building your app for production!
+
+### Section 8: Time to Practice - THE SHOP APP
+
+* 
