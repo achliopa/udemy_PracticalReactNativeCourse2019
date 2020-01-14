@@ -588,3 +588,35 @@ const store = createStore(reducer, composeWithDevTools());
 ## Section 8: Time to Practice - THE SHOP APP
 
 ## Section 9: Handling User Input
+
+### Lecture 185. Configuring TextInputs
+
+* in the downloaded shop app we go to EditProductScreen to work on TextInputs
+* `keyboardType="decimal-pad"` prop in `<TextInput>` makes the keybad numeric 'cross platform'
+* autocapitalize prop is use to autocapitalize text `autoCapitalize="sentences"` * `autoCorrect` prop does autocorrection
+* we can config the pad return key with `returnKeyType="next"` which only configs presentation
+* we can pass `onEndEditing={()=> console.log("done editing")}` event handler which fires when we exit the input field. there are many handlers available for input `onSubmitEditing`
+
+### Lecture 186. Adding Basic Validation
+
+* we add `titleIsValid` to state using Hooks for validations
+* we add a validation helper method
+```
+  const titleChangeHandler = text => {
+    if(text.trim().length === 0) {
+      setTitleIsValid(false)
+    }
+    setTitle(text);
+  };
+```
+* we do conditional rendering `{!titleIsValid && <Text>Please enter a valid title</Text>}`
+* we can use 'ValidateJS' package in our code for cleaner code
+* we also need to add `titleIsValid` in the suseCallback() so that it wont rebuild everytime it changes.
+
+### Lecture 187. Getting Started with useReducer()
+
+* we use a React Hook Reducer `useReducer()` to combine state and build complex state and facilitate our code
+* we create the reducer outside the component so it wont rebuild and to be reusable
+```
+
+```
