@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback, useReducer } from 'react';
 import {
   View,
   ScrollView,
@@ -14,13 +14,31 @@ import { useSelector, useDispatch } from 'react-redux';
 import HeaderButton from '../../components/UI/HeaderButton';
 import * as productsActions from '../../store/actions/products';
 
-const REDUCER_UPDATE = 'UPDATE'
+const FORM_INPUT_UPDATE = 'FORM_INPUT_UPDATE';
 
 const formReducer = (state, action) => {
-  if (action.type === REDUCER_UPDATE) {
-
+  if (action.type === FORM_INPUT_UPDATE) {
+    const updatedValues = {
+      ...state.inputValues,
+      [action.input]: action.value
+    };
+    const updatedValidities = {
+      ...state.inputValidities,
+      [action.input]: action.isValid
+      
+    };
+    let updatedFormIsValid = true;
+    for(const key in updatedValidities) {
+      updatedFormIsValid = updatedFormIsValid && updatedValidities[key];
+    }
+    return {
+      updatedFormIsValid,
+      inputValues: updatedValues,
+      inputValidities: updatedValidities
+    };
   }
-}
+  return state;
+};
 
 const EditProductScreen = props => {
   const prodId = props.navigation.getParam('productId');
@@ -29,15 +47,21 @@ const EditProductScreen = props => {
   );
   const dispatch = useDispatch();
 
-  const [title, setTitle] = useState(editedProduct ? editedProduct.title : '');
-  const [titleIsValid, setTitleIsValid] = useState(false);
-  const [imageUrl, setImageUrl] = useState(
-    editedProduct ? editedProduct.imageUrl : ''
-  );
-  const [price, setPrice] = useState('');
-  const [description, setDescription] = useState(
-    editedProduct ? editedProduct.description : ''
-  );
+  const [formState,dispatchFormState] = useReducer(formReducer, { 
+    inputValues: {
+      title: editedProduct ? editedProduct.title : '',
+      imageUrl: editedProduct ? editedProduct.imageUrl : '',
+      description: editedProduct ? editedProduct.description : '',
+      price: ''
+    }, 
+    inputValidities: {
+      title: editedProduct ? true : false,
+      imageUrl: editedProduct ? true : false,
+      description: editedProduct ? true : false,
+      price: editedProduct ? true : false,
+    }, 
+    formIsValid: editedProduct ? true : false 
+  });
 
   const submitHandler = useCallback(() => {
     if(!titleIsValid) {
@@ -60,11 +84,17 @@ const EditProductScreen = props => {
     props.navigation.setParams({ submit: submitHandler });
   }, [submitHandler]);
 
-  const titleChangeHandler = text => {
-    if(text.trim().length === 0) {
-      setTitleIsValid(false)
-    }
-    setTitle(text);
+  const textChangeHandler = (inputIdentifier, text) => {
+    let isValid = false;
+    if(text.trim().length > 0) {
+      isValid = true
+    } 
+    dispatchFormState({
+      type: FORM_INPUT_UPDATE, 
+      value: text, 
+      isValid,
+      input: inputIdentifier
+    });
   };
 
   return (
@@ -75,7 +105,7 @@ const EditProductScreen = props => {
           <TextInput
             style={styles.input}
             value={title}
-            onChangeText={text => setTitle(text)}
+            onChangeText={textChangeHandler.bind(this, 'title', )}
             keyboardType="default"
             autoCapitalize="sentences"
             autoCorrect
@@ -90,7 +120,7 @@ const EditProductScreen = props => {
           <TextInput
             style={styles.input}
             value={imageUrl}
-            onChangeText={text => setImageUrl(text)}
+            onChangeText={textChangeHandler.bind(this,"imageUrl")}
           />
         </View>
         {editedProduct ? null : (
@@ -99,7 +129,7 @@ const EditProductScreen = props => {
             <TextInput
               style={styles.input}
               value={price}
-              onChangeText={text => setPrice(text)}
+              onChangeText={textChangeHandler.bind(this,"price")}
               keyboardType="decimal-pad"
             />
           </View>
@@ -109,7 +139,7 @@ const EditProductScreen = props => {
           <TextInput
             style={styles.input}
             value={description}
-            onChangeText={text => setDescription(text)}
+            onChangeText={textChangeHandler.bind(this,"description")}
           />
         </View>
       </View>

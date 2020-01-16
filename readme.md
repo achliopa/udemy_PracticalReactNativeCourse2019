@@ -587,7 +587,7 @@ const store = createStore(reducer, composeWithDevTools());
 
 ## Section 8: Time to Practice - THE SHOP APP
 
-## Section 9: Handling User Input
+## Section 9: Handling User Inputcd
 
 ### Lecture 185. Configuring TextInputs
 
@@ -616,7 +616,69 @@ const store = createStore(reducer, composeWithDevTools());
 ### Lecture 187. Getting Started with useReducer()
 
 * we use a React Hook Reducer `useReducer()` to combine state and build complex state and facilitate our code
-* we create the reducer outside the component so it wont rebuild and to be reusable
+* we import it from React
+* we create the reducer outside the component so it wont rebuild at its rerender. we do this if we dont depend on props
 ```
 
+```
+* in the component we call useReducer passing in the reducer object and the initial state
+```
+  const [formState,dispatchFormState] = useReducer(formReducer, { 
+    inputValues: {
+      title: editedProduct ? editedProduct.title : '',
+      imageUrl: editedProduct ? editedProduct.imageUrl : '',
+      description: editedProduct ? editedProduct.description : '',
+      pride: ''
+    }, 
+    inputValidities: {
+      title: editedProduct ? true : false,
+      imageUrl: editedProduct ? true : false,
+      description: editedProduct ? true : false,
+      price: editedProduct ? true : false,
+    }, 
+    formIsValid: editedProduct ? true : false 
+  });
+```
+* we see that reducer combines all different states. we can now get rid of useState()
+* useReducer returns the state and a dispatch action to call to rigger actions.
+* we alter initial state with UPDATE action dispatched when we interact with text inputs (in the change handler)
+```
+dispatchFormState({
+    type: FORM_INPUT_UPDATE, 
+    value: text, 
+    isValid,
+    input: 'title'
+});
+```
+
+### Lecture 188. Finishing the Merged Form & Input Management
+
+* we mod the titleChangeHandler to textChangeHandler passing in the identifier
+* we use the Handler in onChangeHadler of inputs passing in identifier ` onChangeText={textChangeHandler.bind(this,"price")}`
+* it only validates inputs for length
+* form reducer parametrical becomes
+```
+const formReducer = (state, action) => {
+  if (action.type === FORM_INPUT_UPDATE) {
+    const updatedValues = {
+      ...state.inputValues,
+      [action.input]: action.value
+    };
+    const updatedValidities = {
+      ...state.inputValidities,
+      [action.input]: action.isValid
+      
+    };
+    let updatedFormIsValid = true;
+    for(const key in updatedValidities) {
+      updatedFormIsValid = updatedFormIsValid && updatedValidities[key];
+    }
+    return {
+      updatedFormIsValid,
+      inputValues: updatedValues,
+      inputValidities: updatedValidities
+    };
+  }
+  return state;
+};
 ```
