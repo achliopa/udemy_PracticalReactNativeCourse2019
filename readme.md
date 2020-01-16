@@ -682,3 +682,5 @@ const formReducer = (state, action) => {
   return state;
 };
 ```
+* we now can use form state in out code `value={formState.inputValues.title}`
+* we updae useCallback to reflect state
