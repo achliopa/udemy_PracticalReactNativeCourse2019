@@ -683,4 +683,16 @@ const formReducer = (state, action) => {
 };
 ```
 * we now can use form state in out code `value={formState.inputValues.title}`
+* in submitHandler() we use the formState to pass in the values
 * we updae useCallback to reflect state
+
+### Lecture 189. Moving Input Logic Into A Separate Component
+
+* using hooks we can split logic from view easily
+* in /UI we add Input.js for Input reusable view component where we put the JSX for 1 of the inputs
+* vazoume kai to validation sto input xrisimopoiwntas React Hook reducer kai handler to enforce validations.
+* we can use ValidateJS lib instead
+
+### Lecture 190. Connecting Input Component & Form
+
+* 
