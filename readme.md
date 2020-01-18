@@ -695,4 +695,46 @@ const formReducer = (state, action) => {
 
 ### Lecture 190. Connecting Input Component & Form
 
+* we use useEffect() for lifecycle method to forward vals to parent component with a callback. wthe method is called when inputstate changes
+```
+    const { onInputChange } = props;
+
+    useEffect(()=>{
+        if(inputState.touched){
+            onInputChange(inputState.value, inputState.isValid);
+        }
+    }, [inputState, onInputChange]);
+```
+* the callback in the parent component we wrap in useCallback hook to avoid unnecessary rebuild
+```
+  const inputChangeHandler = useCallback((inputIdentifier, inputValue, inputValidity) => {
+    dispatchFormState({
+      type: FORM_INPUT_UPDATE, 
+      value: inputValue, 
+      isValid: inputValidity,
+      input: inputIdentifier
+    });
+  },[dispatchFormState]);
+```
+* we get stack overflow for rerendering way too often
+* the problem is `inputChangeHandler` we use useCallback to avoid unnecessary Recreation
+* but the way we bind it as prop to Input `onInputChange={inputChangeHandler.bind(this, 'title')}` will create a function binding for every render cycle
+* we remove bind and add an id prop instead e.g.`id='imageUrl'`
+
+### Lecture 191. Tweaking Styles & Handling the Soft Keyboard
+
+* we just style error message
+* we add KeyboardAvoidingView to be able to reach all inputs. we wrap with it the ScroolView
+* we config it `<KeyboardAvoidingView style={{flex: 1}} behavior="padding" keyboardVerticalOffset={100}>`
+
+### Lecture 192. Alternatives & Wrap Up
+
+* in production consider [validate.js](https://validatejs.org/) lib
+* our pattern is reusable
+* also [formik](https://jaredpalmer.com/formik/) lib is useful
+
+## Section 10: Http Requests & Adding a Web Server + Database
+
+### Lecture 194. Module Introduction
+
 * 
