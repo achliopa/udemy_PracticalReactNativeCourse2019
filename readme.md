@@ -886,4 +886,24 @@ export const fetchProducts = () => {
 
 ### Lecture 201. Updating & Deleting Products
 
+* we add the edit and delete product action
+* we use thunk to make it async
+* we do the same for delte product action creator
+
+### Lecture 202. Handling Additional Errors
+
+* In EditProductScreen when we dispatch update or create using thunk we get back a promise which can have a state
+* we want to add a loading activity spinner so we useState hook and a flag
+* we use try/catch for errors like before...
+* to throw an alert we use useEffect
+```
+useEffect(() => {
+    if(error) {
+      Alert,alert('An error occured', error, [{ text: 'Okay' }]);
+    }
+  },[error]);
+```
+
+### Lecture 203. Storing Orders
+
 * 
