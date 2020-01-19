@@ -785,4 +785,105 @@ export const createProduct = (title, description, imageUrl, price) => {
 
 ### Lecture 198. Fetching Products from the Server
 
+* we add 'fetchProducts' action to get products from backend.
+* in /screens/shop/ProductsOvrviewScreen we add the action. 
+```
+export const fetchProducts = () => {
+  return async dispatch => {
+    const response = await fetch('https://rn-complete-guide-32172.firebaseio.com/products.json');
+    const resData = await response.json();
+    // console.log(resData);
+    const loadedProducts = [];
+
+    for (const key in resData){
+      loadedProducts.push(new Product(
+        key, 
+        'u1',
+        resData[key].title, 
+        resData[key].imageUrl,
+        resData[key].description,
+        resData[key].price,
+      ));
+    }
+
+    dispatch({ type: SET_PRODUCTS, products: loadedProducts});
+  };
+};
+```
+* we use udseEffect to call it at mount time to populate the screen
+```
+  useEffect(()=>{
+    dispatch(productsActions.fetchProducts());
+  },[dispatch]);
+```
+* what we get from backend is an object
+* we add a case to reducer
+```
+    case SET_PRODUCTS:
+      return {
+        availableProducts: action.products,
+        userProducts: action.products.filter(prod => prod.ownerId === 'u1')
+      };
+```
+
+### Lecture 199. Displaying a Loading Spinner & Handling Errors
+
+* we want a loading spinner when we load the data
+* at ProductOverviewScreen we use state hook fo loading flag
+* we turn dispatch to async/awai using a wrapper
+```
+  useEffect(()=>{
+    const loadProducts = async () => {
+      setIsLoading(true);
+      await dispatch(productsActions.fetchProducts());
+      setIsLoading(false);
+    };
+    loadProducts();
+  },[dispatch]);
+```
+* ActivityIndicator is the spinner in RN
+* when using async.await use try/catch statement to capture unhandled promise exceptions
+* in screen comp we need to handle the error to avoid breaking the app
+* we take out the async loadProducts method from useEffect to make it reusable
+* the way to do it is 
+```
+  const loadProducts = useCallback(async () => {
+    setIsLoading(true);
+    try {
+      await dispatch(productsActions.fetchProducts());
+    } catch (err) {
+      setError(err.message);
+    }
+    setIsLoading(false);
+  },[dispatch, setIsLoading, seError]);
+
+  useEffect(()=>{
+    loadProducts();
+  },[dispatch,loadProducts]);
+```
+* we put it in dependencies to avoid unnecesary recalls and put it in callback to avoid recreations
+
+### lecture 200. Setting Up a Navigation Listener
+
+* in navigation all screens are kept in memory 
+* so if we alter backend data we dont see the change unless we restart the app.
+* in stack navigation it gets destroyed and recreated so no prob
+* in drawer navigation that we use we have a problem
+* we use useEffect to add a navigation listener to re fetch data on navigation
+```
+  useEffect(()=>{
+    const willFocusSub = props.navigation.addListener('willFocus', ()=>{
+      loadProducts();
+    });
+
+    return () => {
+      willFocusSub.remove();
+    };
+  },[loadProducts]);
+```
+* we also do cleanup on return which is a good practice
+* we need both useEffect() as this does refetch when we come back from navigation and the other the initial at first render (component mount)
+
+### Lecture 201. Updating & Deleting Products
+
 * 
