@@ -735,6 +735,54 @@ const formReducer = (state, action) => {
 
 ## Section 10: Http Requests & Adding a Web Server + Database
 
-### Lecture 194. Module Introduction
+### Lecture 195. Setup & How To Send Requests
+
+* we will add backend to store data
+* we will add firebase backend. we go to [console](https://console.firebase.google.com/)
+* we create a new project 'rn-complete-guide'
+* at the project dashboard we need only the database
+* to connect to a DB from a RN app we go through a Web server. firebase offers both
+* we opt for RT database NOT Firestore and Start in Test Mode (no auth required)
+* we cp the URL of our firebase API
+
+### Lecture 196. Installing Redux Thunk
+
+* we know that
+* in App.js we add thunk as middleware after importing it
+
+### Lecture 197. Storing Products on a Server
+
+* in actions/products.js we work on createProduct action creator using thunk
+* we return a method that gets dispatch as an argument and call it when ready to pass the action to reducer
+```
+export const createProduct = (title, description, imageUrl, price) => {
+  return async dispatch => {
+    // write async code
+    const response = await fetch('https://rn-complete-guide-32172.firebaseio.com/products.json', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        title, description, imageUrl, price
+      })
+    });
+
+    const resData = await response.json();
+    dispatch({
+      type: CREATE_PRODUCT,
+      productData: {
+        id: resData.name,
+        title,
+        description,
+        imageUrl,
+        price
+      }
+    });
+  };
+};
+```
+
+### Lecture 198. Fetching Products from the Server
 
 * 
