@@ -906,4 +906,52 @@ useEffect(() => {
 
 ### Lecture 203. Storing Orders
 
+* we mod action creators in /store/actions/orders.js to hit the backend with thunk
+* we store them per user (still harcoded)
+* we mod also the reducer for the action
+
+### Lecture 204. Displaying an ActivityIndicator
+
+* we do the same patern with ActivityIndicator => loading/error state => wrap dipsatch in asyc/await => useEffect() (for error Alert) => conditional rendering
+* we work at /screens/shop/CartScreen.js
+
+### Lecture 205. Fetching Stored Orders
+
+* we add an action creator in actions/orders.js
+* same like fetchProducts...
+* we add it in reducer
+* In OrdersScreen.js we need to dispatch the action
+* we use useEffect from React and useDispatch from react-redux to do it
+```
+  useEffect(()=>{
+    const fetchOrders = async () => {
+      setIsLoading(true);
+      await dispatch(ordersActions.fetchOrders());
+      setIsLoading(false);
+    };
+    fetchOrders();
+    return () => {
+      fetchOrders.remove();
+    }
+  },[dispatch]);
+```
+
+### Lecture 206. Adding "Pull to Refresh"
+* we want to drag down ProductsOverview list and refetch products from Backend
+* we mod FlatList
+```
+  return (
+    <FlatList
+      onRefresh={loadProducts}
+      refreshing={isRefreshing}
+```
+* refreshing flag is mandatory to indicate when loading is done (state var)
+* in order to work we need to remove the setter from the reusable callback and leave it only in the useEffect()called at component mount
+* we use a different flag for that... isRefreshing, which we use also in FlatList.
+* in that case we trigger spinner in flatlist and not to the whole screen when we Pull to Refresh
+
+## Section 11: User Authentication
+
+### Lecture 210. How Authentication Works
+
 * 
