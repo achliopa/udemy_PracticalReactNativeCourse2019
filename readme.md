@@ -993,3 +993,10 @@ export default createAppContainer(MainNavigator);
 * we need a new async action in a new file actions/auth.js
 * we get the API KEY form project console => Settings Icon => Project Settings => Web API Key
 * we call action creator from AuthScreen and cp the FormState code from EditProduct to capture email and passwors from our form
+* we cp reducer, inputChangeHandler and initalvalue code rom EditProductScreen
+* signup works we get back token and id
+
+### Lecture 213. Logging Users In
+
+* to signin we visit a different url https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]
+* we implement a new action reducer
