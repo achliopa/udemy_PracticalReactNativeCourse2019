@@ -2,7 +2,7 @@ export const SIGNUP = 'SIGNUP';
 
 export const signup = (email,password) => {
     return async dispatch => {
-        await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDO-TeJ19FFh3YDcX0hgOLWRWmx9YJQfwc',
+        const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDO-TeJ19FFh3YDcX0hgOLWRWmx9YJQfwc',
         {
             method: 'POST',
             headers: {
@@ -14,6 +14,12 @@ export const signup = (email,password) => {
                 returnSecureToken: true
             })
         });
-      dispatch({type: SIGNUP});  
+        if(!response.ok) {
+            throw new Error('Something went wrong!');
+        }
+        
+        const resData = await response.json();
+        
+        dispatch({type: SIGNUP});  
     };
 };
