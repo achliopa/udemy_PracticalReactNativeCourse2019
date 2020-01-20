@@ -954,4 +954,42 @@ useEffect(() => {
 
 ### Lecture 210. How Authentication Works
 
-* 
+* Backend does Auth.
+* App sends auth request. backend responds with sthing. error or success
+* In web dev. backend stores a session and sends back a session key. the key is used by Browser to tell that user is authenticated
+* Mobile apps are different. typically Backends are stateless. server does not care
+* we just get back a token signed by the servers private key
+* we store the token in a storage (e.g redux state)
+* with the token we can tell the user of the app is logged in. also we know who he is
+
+### Lecture 211. Implementing a Basic Login Screen
+
+* in screens/user we add AuthScreen.js
+* we add boilerplate code and import Input ui component
+* we want to be able to see the Auth Screen at login before anything else...
+* we use switchNavigator for that (perfect for the use case). we add it in ShopNavigator. it does not allow to go back
+```
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
+
+const AuthNavigator = createStackNavigator({
+  Auth: AuthScreen
+});
+
+const MainNavigator = createSwitchNavigator({
+  Auth: AuthNavigator,
+  Shop: ShopNavigator
+});
+
+export default createAppContainer(MainNavigator);
+```
+* we install `npm install --save  expo-linear-gradient` to use a new component LinearGradient
+
+### Lecture 212. Adding User Signup
+
+* firebase offers authentication
+* in our project console we go to Authentication module => Set Up Signin Method => Email Password => Enable
+* we go to [docs](https://firebase.google.com/docs/reference/rest/auth) and select SignUp with emai/password
+* we see that the API link is https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY] and the api specs
+* we need a new async action in a new file actions/auth.js
+* we get the API KEY form project console => Settings Icon => Project Settings => Web API Key
+* we call action creator from AuthScreen and cp the FormState code from EditProduct to capture email and passwors from our form
