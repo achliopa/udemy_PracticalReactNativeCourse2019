@@ -1000,3 +1000,87 @@ export default createAppContainer(MainNavigator);
 
 * to signin we visit a different url https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]
 * we implement a new action reducer
+* we use react hools useState to switch between login and signup
+* invert react hook state `setIsSignup(prevState => !prevState);`
+
+### Lecture 214. Managing the Loading State & Errors
+
+* we add activtity indicator for loading and eeror alert using useEffect
+* for custom messges we use the API docs and error reply
+```
+        if (!response.ok) {
+            const errorResData = await response.json();
+            const errorId = errorResData.error.message;
+            let message = 'Something went wrong!';
+            if (errorId === 'EMAIL_NOT_FOUND') {
+                message = 'This email could not be found!';
+            } else if (errorId === 'INVALID_PASSWORD') {
+                message = 'This password is not valid!'
+            }
+            throw new Error(message);
+        }
+```
+
+### Lecture 215. Using the Token
+
+* if we successfully login/signup we just programmaticaly navigate to shop screen
+```
+        try {
+            await dispatch(action);
+            props.navigation.navigate('Shop');
+        } catch(err) {
+            setError(err.message);
+        }
+```
+* to use the token we add a new auth reducer /reducers/auth.js to add it to redux state
+```
+import { LOGIN, SIGNUP } from '../actions/auth';
+
+const initialState = {
+    token: null,
+    userId: null
+}
+
+export default (state = initialState, action) => {
+    switch (action.type) {
+        case LOGIN:
+        case SIGNUP:
+            return {
+                token: action.token,
+                userId: action.userId
+            };
+        default:
+            return state;
+    }
+};
+```
+* we return the token and id in action creators
+* we need the token and id to personalize the app and restrict access to the API
+* in firebase console => Database => Rules we mod it like
+```
+{
+  "rules": {
+    ".read": true,
+    ".write": "auth != null"
+  }
+}
+```
+* now we can read from backend but to write we need to be authenticated. aka we need to send the token with our request
+* we add authReducer to rootReducer
+* to append a token to a firebase api request we mod the URL according to SPEC
+* Redux Thunks gives access to state as well
+```
+export const updateProduct = (id, title, description, imageUrl) => {
+  return async (dispatch, getState) => {
+    const token = getState().auth.token;
+    // any async code we want
+    const response = await fetch(`https://rn-complete-guide-32172.firebaseio.com/products/${id}.json?auth=${token}`, {
+      method: 'PATCH', ...........
+```
+* we do the same to all write restful actions
+
+### Lecture 216. Mapping Orders to Users
+
+* we use userId from state to map orders to users at creation time
+* we also add UserID to products data we store to firebase
+* * we also filter products when we fetch by getting state userId and using it to filter in the reducer
