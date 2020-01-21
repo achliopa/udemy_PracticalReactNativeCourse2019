@@ -1084,3 +1084,94 @@ export const updateProduct = (id, title, description, imageUrl) => {
 * we use userId from state to map orders to users at creation time
 * we also add UserID to products data we store to firebase
 * * we also filter products when we fetch by getting state userId and using it to filter in the reducer
+
+### Lecture 217. Improved Mapping (Scoping)
+
+* if we go to admin after logging in we dont see our products
+* we still have a hardcoded userid in action ccreator
+
+### Lecture 218. Implementing "Auto Login"
+
+* if we reload we need to relogin... we would like to persist and have a session like behaviour
+* we need to store the token on the device not in Redux.
+* we need to check storage at app start and get the token in redux
+* we use RNs Async Storage `import { AsyncStorage } from 'react-native';` which is a keyvalue storage
+```
+const saveDataToStorage = (token,userId) => {
+    AsyncStorage.setItem('userData', JSON.stringify({
+        token,
+        userId
+    }));
+};
+```
+* we use it in login auth action creator after the dispatch
+* token expores... so we need to know how long its valid to delete it beforehand
+```
+        const expirationDate = new Date(
+            new Date().getTime() + parseInt(resData.expiresIn) * 1000
+        );
+        saveDataToStorage(resData.idToken, resData.localId, expirationDate);
+```
+* we will create a new screen at bootup to determine if user is signedin based on storagedata
+* we add the screen to main navigator
+* the logic of startup screen is in a lifecycle method
+```
+ useEffect(()=>{
+        const trylogin = async () => {
+            const userData = await AsyncStorage.getItem('userData');
+            if(!userData) {
+                props.navigation.navigate('Auth');
+                return;
+            }
+            const { token, userId, expiryDate } = JSON.parse(userData);
+            const expirationDate = new Date(expiryDate);
+            if(expirationDate <= new Date() || (!token) || (!userId)) {
+                props.navigation.navigate('Auth');
+                return;
+            }
+            props.navigation.navigate('Shop');
+            dispatch(authActions.authenticate(userId,token));
+
+        } 
+        trylogin();
+    },[dispatch]);
+```
+
+### Lecture 219. Adding Logout
+
+* we need a new action for logout
+* we will add a new button in sidedrawer
+* it is added as anonymous react component to ShopNavigation as contentComponent
+```
+import { createDrawerNavigator,DrawerItems } from 'react-navigation-drawer'; 
+import { Platform, SafeAreaView, Button, View } from 'react-native';
+
+const ShopNavigator = createDrawerNavigator(
+  {
+    Products: ProductsNavigator,
+    Orders: OrdersNavigator,
+    Admin: AdminNavigator
+  },
+  {
+    contentOptions: {
+      activeTintColor: Colors.primary
+    },
+    contentComponent: props => {
+      const dispatch = useDispatch();
+      return <View style={{flex: 1, paddingTop: 20 }}>
+        <SafeAreaView forceInset={{top: 'always', horizontal: 'never'}}>
+          <DrawerNavigatorItems {...props}/>
+          <Button title="Logout" color={Colors.primary} onPress={()=>{
+            dispatch(authActions.logout());
+            props.navigation.navigate('Auth');
+          }}/>
+        </SafeAreaView>
+      </View>
+    } 
+  }
+);
+```
+
+### Lecture 220. Implementing "Auto Logout"
+
+* 

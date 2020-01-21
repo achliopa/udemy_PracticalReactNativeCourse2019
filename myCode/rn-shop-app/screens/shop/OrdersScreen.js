@@ -14,15 +14,10 @@ const OrdersScreen = props => {
   const dispatch = useDispatch();
   
   useEffect(()=>{
-    const fetchOrders = async () => {
       setIsLoading(true);
-      await dispatch(ordersActions.fetchOrders());
-      setIsLoading(false);
-    };
-    fetchOrders();
-    return () => {
-      fetchOrders.remove();
-    }
+      dispatch(ordersActions.fetchOrders()).then(()=>{
+        setIsLoading(false);
+      });
   },[dispatch]);
   
   if(isLoading){
@@ -33,6 +28,14 @@ const OrdersScreen = props => {
     );
   } 
   
+  if (orders.length === 0) {
+    return (
+      <View style={styles.centered}>
+        <Text>No orders found. Maybe start adding some...</Text>
+      </View>
+    );
+  }
+
   return (
     <FlatList
       data={orders}

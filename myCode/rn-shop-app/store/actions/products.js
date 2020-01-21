@@ -12,6 +12,7 @@ export const fetchProducts = () => {
     try {
       const response = await fetch('https://rn-complete-guide-32172.firebaseio.com/products.json');
       if(!response.ok) {
+        console.log(await response.json())
         throw new Error('Something went wrong!');
       }
       
@@ -23,7 +24,7 @@ export const fetchProducts = () => {
       for (const key in resData) {
         loadedProducts.push(new Product(
           key,
-          'u1',
+          resData[key].ownerId,
           resData[key].title,
           resData[key].imageUrl,
           resData[key].description,
