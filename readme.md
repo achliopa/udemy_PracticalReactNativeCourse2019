@@ -1263,4 +1263,15 @@ export default NavigationContainer;
 * we add a new project 'rn-complete-guide'
 * we add basic files and scaffolding, 4 screens and one navigation js file.
 * we install and import  navigation, stack navigation in Placesnavigator.js
-* we import screens
+```
+yarn add react-navigation
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context
+expo install react-navigation-stack @react-native-community/masked-view
+```
+* we import screens and add boilerplate code
+* add header buttons `yarn add react-navigation-header-buttons`
+* add it as component
+* we import Ionicons from @expo/vector-icons
+* we implement a HeaderButton
+
+### Lecture 227. Getting Started with the Form
