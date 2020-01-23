@@ -1174,4 +1174,81 @@ const ShopNavigator = createDrawerNavigator(
 
 ### Lecture 220. Implementing "Auto Logout"
 
+* we add a new action in auth to auto logout when timer expires
+```
+export const logout = () =>  {
+    return async dispatch => {
+        clearLogoutTimer();
+        await AsyncStorage.removeItem('userData');
+        dispatch({ type: LOGOUT });
+        
+    };
+};
+
+const clearLogoutTimer = () => {
+   if(timer) {
+       clearTimeout(timer); 
+   }
+};
+
+const setLogoutTimer = expirationTime => {
+    return dispatch =>{
+        timer = setTimeout(()=> {
+            dispatch(logout());
+        },expirationTime)  
+    };
+};
+```
+* we need to mod all authenticate calls as we now use expirey date
+```
+export const authenticate = (userId,token,expiryTime) => {
+    return dispatch => {
+        dispatch(setLogoutTimer(expiryTime));    
+        dispatch({ type: AUTHENTICATE, userId, token});  
+    };
+}
+```
+
+* erasing the key is ok but we need to force the navigator to the authscreen as well
+* we need to pass redux state ito navigation so we add a container at top level
+* we create it in /navigation/NavigationContainer.js as a wrapper to Main navigatior object
+* in there i can access redux state and pass in prop down under to do conditional navigation
+```
+import React, { useEffect, useRef } from 'react';
+import { useSelector } from 'react-redux';
+import { NavigationActions } from 'react-navigation';
+
+import ShopNavigator from './ShopNavigator';
+
+const NavigationContainer = props => {
+    const navRef = useRef();
+    const isAuth = useSelector(state => !!state.auth.token)
+    
+    useEffect(()=>{
+        if(!isAuth){
+            navRef.current.dispatch(
+                NavigationActions.navigate({ routeName: 'Auth' })
+            );
+        }
+    },[isAuth]);
+    
+    return <ShopNavigator ref={navRef} />;
+};
+
+export default NavigationContainer;
+```
+* in the wrapper we use ref hook to pass in a mutable object to the child component passing in a navigation action
+* when auth redux state changes (useEffect handles that)
+
+### Lecture 221. Auto-Logout & Android (Warning)
+
+* With the "Auto Logout" approach implemented in the previous lecture, you'll very likely get a warning on Android
+* Using setTimeout() with a big timeout duration (as we're setting it => 1 hour), can't be handled in the most efficient way by Android. 
+* Unfortunately, there is no perfect solution available though but you can browse the referenced issue thread for possible workarounds: 
+* [workaround](https://github.com/facebook/react-native/issues/12981)
+
+## Section 12: Native Device Features (Camera, Maps, Location, SQLite, ...) [GREAT PLACES APP]
+
+### Lecture 224. Module Introduction
+
 * 
