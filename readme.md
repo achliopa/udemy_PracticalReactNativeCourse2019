@@ -1249,6 +1249,18 @@ export default NavigationContainer;
 
 ## Section 12: Native Device Features (Camera, Maps, Location, SQLite, ...) [GREAT PLACES APP]
 
-### Lecture 224. Module Introduction
+### Lecture 225. Planning the App
 
-* 
+* List of places Screen
+* Place deatil screen w/map => tap to see full screen map
+* Menu
+* Add place screen + take image button to go to cammera + map button
+* Also pin on map
+* Data in SQLite DB  on device
+
+### Lecture 226. Screen & Navigation Setup
+
+* we add a new project 'rn-complete-guide'
+* we add basic files and scaffolding, 4 screens and one navigation js file.
+* we install and import  navigation, stack navigation in Placesnavigator.js
+* we import screens
