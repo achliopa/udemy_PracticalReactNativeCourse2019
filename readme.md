@@ -1323,4 +1323,116 @@ expo install react-navigation-stack @react-native-community/masked-view
 
 ### Lecture 231. Configuring the Camera Access
 
+* in lauchCameaAsync() we pass a config object for setting what to do with camera
+* it returns a promise with the image object... with dimensions and the actual image file location
+```
+        const image = await ImagePicker.launchCameraAsync({
+            allowsEditing: true,
+            aspect: [16,9],
+            quality: 0.5
+        });
+
+        setPickedImage(image.uri);
+```
+
+### Lecture 232. Using the Picked Image
+
+* we store the image to he redux state
+* we add it to the model and list
+
+### Lecture 233. Storing the Image on the Filesystem
+
+* we use the FileSystem expo package `expo install expo-file-system`
+* we save to filesystem once we submit the form
+* we will save in action creator using thunk as it is async
+* import `import * as FileSystem from 'expo-file-system';`* FS gives access to cache dir, bundle dir and document dir
+* we get filename from uri, we find the filepath to permanent filesystem
+* we move th file from temp to permanent place
+```
+export const addPlace = (title,image) => {
+    return async dispatch => {
+        const filename = image.split('/').pop();
+        const newPath = FileSystem.documentDirectory + filename;
+        try {
+            await FileSystem.moveAsync({
+                from: image,
+                to: newPath
+            });
+        } catch(err) {
+            console.log(err);
+            throw err;
+        }
+        
+        dispatch ({
+            type: ADD_PLACE,
+            placeData: {
+                title,
+                image
+            }
+        });
+    }
+};
+```
+* image is stored in permanent dir but the state and uri to it not so after relaunch app cannot find it... we need to store state in DB (SQLite)
+
+### Lecture 234. Diving into SQLite for Permanent Data Storage
+
+* expo offers a package for it `expo install expo-sqlite`
+* we add a db.js helper file with db setup logic
+* we connect to the DB (create or attach)
+* we init the DB creating a table
+* we pass in param in an array
+* we set a succes and error callback
+* we wrap the Vanilla JS callback coe in a promise ES2015 style and return it
+```
+import * as SQLite from 'expo-sqlite';
+
+const db = SQLite.openDatabase('places.db');
+
+export const init = () => {
+    const promise = new Promise((resolve,reject) => {
+        db.transaction((tx) => {
+            tx.executeSql('CREATE TABLE IF NOT EXISTS places (id INTEGER PRIMARY KEY NOT NULL, title TEXT NOT NULL, imageUri TEXT NOT NULL, address TEXT NOT NULL, lat REAL NOT NULL, lng REAL NOT NULL);',
+                [],
+                () => { 
+                    resolve();
+                },
+                (_, err) => { 
+                    reject(err);
+                }
+            );
+        });
+    });
+    return promise;
+};
+```
+* in App.js we call the init method
+
+### lecture 235. Storing Data in the Local Database
+
+* we add a method async to insert data to table
+* we avoid sring interpolation on SQL query to avoid SQL attacks. we use the lib pattern with ??? injections that verify our data prior to insert
+```
+export const insertPlace = (title,imageUri,address,lat,lng) => {
+    const promise = new Promise((resolve, reject) => {
+        db.transaction((tx) => {
+            tx.executeSql('INSERT INTO places (title, imageUri, address, lat, lng) VALUES (?,?,?,?,?);',
+                [title,imageUri,address,lat,lng],
+                (_, result) => {
+                    resolve(result);
+                },
+                (_, err) => {
+                    reject(err);
+                }
+            );
+        });
+    });
+    return promise;
+};
+```
+
+* we call the method in addPlace action creator
+
+### Lecture 236. Fetching Data from the Local Database
+
 * 
