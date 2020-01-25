@@ -1275,3 +1275,52 @@ expo install react-navigation-stack @react-native-community/masked-view
 * we implement a HeaderButton
 
 ### Lecture 227. Getting Started with the Form
+
+* we add redux in app.js
+* we use useDispatch in NewPlaceScreen to add place to state using the addPlace action
+* we add a /models folder with place.js for the Place class 
+
+### Lecture 229. Outputting a List of Places
+
+* we use FlatList and build a new component PlaceItem for FlatList
+* its a standard component. there we programmaticaly go back to detail passing in nav params
+
+### Lecture 230. Accessing the Device Camera
+
+* use expo to make your life easier using native feats
+* Camera package give full access to the Camera flow 
+* if we hust want to get an image we use expo ImagePicker
+* we need to `expo install expo-image-picker` and import it `import * as ImagePicker from 'expo-image-picker`
+* we add a new Component 'ImgPicker' where we add a handler that invokes `ImagePicker.lauchCameraasync()` method
+* we need to give the app permission to use the camera in ios.... in android we get an alert asking or permission
+* we use the expo Permissions package `expo install expo-permissions` and import it `import * as Permissions from 'expo-permissions';`
+* we add a verify permission function function
+```
+    const verifyPermissions = async () => {
+        const result = await Permissions.askAsync(Permissions.CAMERA);
+        if (result.status !== 'granted') {
+            Alert.alert(
+                'Insufficient permissions',
+                'You neet to grant camera permissions to use this app.',
+                [{ text: 'Okay' }]
+            );
+            return false;
+        }
+        return true;
+    };
+```
+* the take image is
+```
+    const takeImageHandler = async () => {
+        const hasPermission = await verifyPermissions();
+        if (!hasPermission){
+            return;
+        }
+        ImagePicker.launchCameraAsync();
+    };
+```
+* we need to reinstall expo app in mobile
+
+### Lecture 231. Configuring the Camera Access
+
+* 

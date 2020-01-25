@@ -10,6 +10,13 @@ const rootReducer = combineReducers({
     places: placesReducer    
 });
 
+const store = createStore(rootReducer, applyMiddleware(ReduxThunk));
+
 export default function App() {
-  return (<PlacesNavigator />);
+  return (
+    <Provider store={store}>
+      <PlacesNavigator />
+    </Provider>
+
+  );
 }
