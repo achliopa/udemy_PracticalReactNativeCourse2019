@@ -1435,4 +1435,12 @@ export const insertPlace = (title,imageUri,address,lat,lng) => {
 
 ### Lecture 236. Fetching Data from the Local Database
 
+* we add a fetch data function from the db
+* the only difference is the SQL query 'SELECT * FROM places'
+* we add a new action creator (async)
+* we call the action in PlacesList at launch time (useEffect) using dispatch
+* we add the action to reducer
+
+### Lecture 237. Getting the User Location
+
 * 
