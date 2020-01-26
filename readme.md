@@ -1443,4 +1443,130 @@ export const insertPlace = (title,imageUri,address,lat,lng) => {
 
 ### Lecture 237. Getting the User Location
 
+* we install expo location `expo install expo-location`
+* we add  a new component 'LocationPicker' for selecting location and add it to NewPlaceScreen
+* we import in picker the location package `import * as Location from 'expo-location';` also we import Permissions from expo to give permission for location tracking `import * as Permissions from 'expo-permissions';`
+* we use the same method verifyPermisisons to give location prrmissions to the app (see Lec 230)
+* we use `Location.getCurrentPositionAsync({ ` which returns
+```
+Object {
+  "coords": Object {
+    "accuracy": 65,
+    "altitude": 143.04806518554688,
+    "altitudeAccuracy": 10,
+    "heading": -1,
+    "latitude": 40.5494264550398,
+    "longitude": 23.050560355812518,
+    "speed": -1,
+  },
+  "timestamp": 1580061073556.993,
+}
+```
+* the location getter is
+```
+ const getLocationHandler = async () => {
+        const hasPermission = await verifyPermissions();
+        if(!hasPermission){
+            return;
+        }
+
+        try {
+            setIsFetching(true);
+            const location = await Location.getCurrentPositionAsync({ 
+                timeout: 5000 
+            });
+            console.log(location)
+            setPickedLocation({
+                lat: location.coords.latitude,
+                lng: location.coords.longitude
+            });
+        } catch(err) {
+            Alert.alert(
+                'Could not fetch location!', 
+                'Please try again later or pick a location on the map.',
+                [{ text: 'Okay' }]
+            )
+        }
+        setIsFetching(false);
+        
+    };
+```
+
+### Lecture 238. Showing a Map Preview of the Location
+
+* google offers an api to show a [static image of a spec location](https://developers.google.com/maps/documentation/maps-static/intro)
+* we send a req to an API passing in an API key and the coordinates
+* if we dont have an activ eproject for our app we create one: Get Started => Select Maps + Places => Continue => Select Project => Set Billing
+* we get our api key and use it in the API url
+* we create a MapPreview component where we hit the backend and get an image that we render. lat lng are passed as props
+```
+const MapPreview = props => {
+    let imagePreviewUrl;
+    if (props.location) {
+        imagePreviewUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${
+        props.location.lat
+        },${props.location.lng
+        }&zoom=14&size=400x200&maptype=roadmap&markers=color:red%7Clabel:A%7C${
+        props.location.lat
+        },${props.location.lng}&key=${ENV.googleApiKey}`;
+    }
+
+    return (
+        <View style={{...styles.mapPreview, ...props.style}}>
+            {props.location ? <Image style={styles.mapImage} source={{ uri: imagePreviewUrl}}/>
+            : props.children }
+        </View>
+    );
+};
+```
+### Lecture 239. More on Environment Variables
+
+* In the previous lecture, we created a basic environment variables file (env.js).
+* This basic file just exports a JS object - but you could get more fancy and for example export different environment variables for your development flow (i.e. for testing/ developing your app) and for production (i.e. for when you publish your app).
+* The special __DEV__ global variable offered by Expo helps you - it's a variable which you can always access anywhere in your Expo-driven React Native project to determine whether you're running this app in development mode or not.
+* Therefore, you could create a more elaborate environment variables file like this one
+```
+const variables = {
+    development: {
+        googleApiKey: 'abc'
+    },
+    production: {
+        googleApiKey: 'xyz'
+    }
+};
+ 
+const getEnvVariables = () => {
+    if (__DEV__) {
+        return variables.development; // return this if in development mode
+    }
+    return variables.production; // otherwise, return this
+};
+ 
+export default getEnvVariables; // export a reference to the function
+```
+
+### Lecture 240. Displaying an Interactive Map
+
+* we want an interactive map in order to scroll to our location
+* expo has it in MapView Package. it is based on 'react-community/react-native-maps' but we install  `expo install react-native-maps` in bare RN apps see docs
+* MapScreen will host the intereactive map
+* we import `import MapView from 'react-native-maps';`
+* we cannot programmaticaly navigate to MapScreen from LocationPicker as we are not in a Navigator Screen
+* to fix this we forward the navigation prop from NewPlaceScreen to Locationpicker `<LocationPicker navigation={props.navigation} />`
+* our MapScreen passing in the region object with location and some required styling 
+```
+const MapScreen = props => {
+    const mapRegion = {
+        latitude: 40.55,
+        longitude: 23.05,
+        latitudeDelta: 0.022,
+        longitudeDelta: 0.0421,
+    }
+    return <MapView style={styles.map} region={mapRegion} />;
+};
+```
+* on iOS the default maps is Apple Maps
+
+### Lecture 241. Adding a Marker
+
 * 
