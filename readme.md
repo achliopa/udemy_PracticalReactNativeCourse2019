@@ -1569,4 +1569,7 @@ const MapScreen = props => {
 
 ### Lecture 241. Adding a Marker
 
-* 
+* we can add interactivity to the MapView passing in an onPress handler
+* onPress event object on map contians a lot of data
+* we useState to get the location and place a marker on Map
+* we import Marker from react-native-maps
