@@ -1724,4 +1724,92 @@ MapScreen.navigationOptions = navData => {
 
 ### Lecture 254. Building Apps with Just the React Native CLI
 
-* 
+* [React native CLI](https://facebook.github.io/react-native/docs/getting-started) contains  instructions how to build the toolchain
+* we create a project with react-native-cli `react-native init RNWithoutExpo`
+* we cd in the folder and run project `react-native run-android` it launches the emulator
+* it uses android-sdk or xcode
+* we look at code
+
+### Lecture 255. Live Reload and RN CLI Apps
+
+* RN-CLI only apps need to be enabled on Emulators (Enable Live Reload)
+
+### Lecture 256. Adding Native Modules to Non-Expo Apps
+
+* we gut out App.js
+* for native feats we can look in expo and then for the react-native equivalent. in expo apps all native feats are added with expo packages
+* we install image picker `npm install --save react-native-image-picker`
+* then we link it `react-native link react-native-image-picker`
+* in 'build.gradle' a line is added
+* we import it `import ImagePicker from 'react-native-image-picker';`
+* we add the ref code in the App.js file
+* we lauch app. we are missing permissions
+* in /android/app/src/main/AndroidManifest.xml we add 
+```
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+```
+* in ios we need to add in /ios/RNNWIthoutExpo/info.plist we add
+```
+ <key>NSPhotoLibraryUsageDescription</key>
+    <string>$(PRODUCT_NAME) would like access to your photo gallery</string>
+    <key>NSCameraUsageDescription</key>
+    <string>$(PRODUCT_NAME) would like to use your camera</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>$(PRODUCT_NAME) would like to save photos to your photo gallery</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>$(PRODUCT_NAME) would like to use your microphone (for videos)</string>
+```
+* in 'install.md' in /doc folder of package github repo we can see how to donfig the project
+
+### Lecture 257. Understanding Expo's "Bare Workflow"
+
+* we have a react-native app that is preconfigured to use expo feats (easier package integration). not all but most
+* check [bare workflow](https://docs.expo.io/versions/v36.0.0/bare/exploring-bare-workflow/)
+* it has a number of supported apis
+* we need expo-cli and react-native-cli installed
+* we `expo init RNWithExpoBare` we choose minimal
+* we can avoi expo cli an use react-native
+* what we get is an expo managed workflow out of expo managed workflow
+* react-native-unimodules are used
+* in the docs of react-native-unimodules we see that hety can be used in an existing react native app. its a lot of hustle we avoid by using `expo init`
+* in the project folder source files are similat like in react native cli xreated app
+* we can now add 3rd party packages like react-native-image-picker
+* we can also add expo apis listed in the docs
+* we run `react-native run-android`
+
+### Lecture 258. Ejecting from Expo's "Managed Workflow"
+
+* an option is to convert a managed expo project to bare workflow
+* we will convert 'rn-complete-guide'
+* we cd in the project and run `expo eject ` make sure to cp the project if we want to keep the managed one
+* we choose 'bare' option to get the expo bare workflow with react-native-unimodules package
+* 2 packages 'expo-image-picker' and 'react-native-maps' need addtional setup to add to the project
+* we go to the package folder in 'expo-image-picker' and follow installation instructions
+* we do the same for 'react-native-map following installation instructions `react-native link react-native-maps`
+* we also need to add metadata to AndroidManifest file
+* we pass in the API key and. we also need to enable map sdk in google for android
+* we fire up the app with `react-native run-android`
+
+### Lecture 259. When To Use Which?
+
+* Expo
+  * easy to use and develop
+  * easy to deploy. ios on win/linux
+  * rich suite of native modules, easy to use, well maintained
+  * wrapper around app (more heavy)
+  * restriction to built in native modules
+* Non Expo
+  * more manual setup required
+  * manual deploy, no ios on win/linux
+  * any lib can be used with manual setup
+  * no wrapper
+  * no limitations, and outof the box functionality
+
+### Lecture 260. Useful Resources & Links
+
+  * [Why Not Expo?](https://docs.expo.io/versions/v34.0.0/introduction/why-not-expo/)
+  * [React Native Setup without Expo](https://facebook.github.io/react-native/docs/getting-started#installing-dependenci)
+
+## Section 14: Publishing React Native Apps
+

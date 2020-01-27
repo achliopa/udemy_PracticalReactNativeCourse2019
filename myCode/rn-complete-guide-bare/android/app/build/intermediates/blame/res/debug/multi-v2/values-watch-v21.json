@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v21/values-watch-v21.xml",
+            "map": [
+                {
+                    "source": "/home/achliopa/.gradle/caches/transforms-1/files-1.1/appcompat-1.1.0.aar/769d0b56a2a5e3bac9dfd44e8ebd2e17/res/values-watch-v21/values-watch-v21.xml",
+                    "from": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,271,499",
+                        "endLines": "5,9,13",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "266,494,724"
+                    }
+                }
+            ]
+        }
+    ]
+}

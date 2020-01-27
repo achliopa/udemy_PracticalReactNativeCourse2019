@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/home/achliopa/.gradle/caches/transforms-1/files-1.1/appcompat-1.1.0.aar/769d0b56a2a5e3bac9dfd44e8ebd2e17/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/home/achliopa/.gradle/caches/transforms-1/files-1.1/core-1.1.0.aar/daf5046f7f59d945617f9812b12abe02/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}

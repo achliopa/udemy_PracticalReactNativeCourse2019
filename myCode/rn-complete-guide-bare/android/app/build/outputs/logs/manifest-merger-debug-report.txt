@@ -1,0 +1,580 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:1:1-58:12
+INJECTED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:1:1-58:12
+INJECTED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:1:1-58:12
+INJECTED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:1:1-58:12
+MERGED from [:react-native-maps] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-12:12
+MERGED from [:react-native-screens] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-reanimated] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-gesture-handler] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-permissions] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-permissions/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-image-picker] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-25:12
+MERGED from [com.theartofdev.edmodo:android-image-cropper:2.7.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-android-image-cropper-2.7.0.aar/e8fa88f82e5ac26833b18e229b81e3c9/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-react-native-adapter] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.react:react-native:0.61.5] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-react-native-0.61.5.aar/d2289207821ea11173f041c981505ed2/AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.android.material:material:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/material-1.0.0.aar/f82c2e72e16ad996aef4ec9759d193fc/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/appcompat-1.1.0.aar/769d0b56a2a5e3bac9dfd44e8ebd2e17/AndroidManifest.xml:17:1-24:12
+MERGED from [:expo-app-loader-provider] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-app-loader-provider/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-constants] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-constants/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-error-recovery] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-error-recovery/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-file-system] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-30:12
+MERGED from [:expo-font] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-font/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-keep-awake] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-keep-awake/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-linear-gradient] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-location] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-21:12
+MERGED from [:expo-sqlite] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-sqlite/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:expo-web-browser] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-barcode-scanner-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-barcode-scanner-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-camera-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-camera-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-constants-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-constants-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-face-detector-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-face-detector-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-file-system-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-file-system-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-font-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-font-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-permissions-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-permissions-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-task-manager-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-task-manager-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-core] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/@unimodules/core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-image-loader-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-image-loader-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:unimodules-sensors-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-sensors-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [org.webkit:android-jsc:r245459] /home/achliopa/.gradle/caches/transforms-1/files-1.1/android-jsc-r245459.aar/dd4ac182fc8d1755ad9a4253cab5d111/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-maps-16.1.0.aar/dd15ef1f629be3ed0a93690c9190e8d9/AndroidManifest.xml:17:1-38:12
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-location-16.0.0.aar/f9cefeb502e817431208d983e3eedd5a/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.1.0.aar/8d5402d456c18ff69f1cb82476d62a2e/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-android-maps-utils-0.5.aar/9adb2e8115974414235b37980707eeb7/AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/14f3729e7ab397e6a35a7ec27b5f4e89/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-16.0.0.aar/86329ad46a0a655d14fcae9832f6e87b/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.2.0.aar/b1c3013f9c896090cd129fbb599e9ad4/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/legacy-support-v4-1.0.0.aar/890d23dc1fdb43bbf79f838251703574/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.browser:browser:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/browser-1.0.0.aar/bcb336a462299eeb5ae844ba85b1117b/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/recyclerview-1.0.0.aar/e0c99d14000123e83b891d372c7890eb/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0.aar/cd993d90525cf5307ccf51abc53c96e7/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-1.0.0.aar/c12afa2f95d835164ea09e8e26fe9031/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/transition-1.1.0.aar/1deb9cb22cff2426883da7a7c7c28b5b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fresco:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/fresco-2.0.0.aar/1d3a1207fe78f504ee728f321577824f/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-2.0.0.aar/bce6b8ae374dcef737e7484b25c5f24f/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/drawee-2.0.0.aar/985274613fb6c616e424bd1f193618b2/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/nativeimagefilters-2.0.0.aar/b6d037fbff0f8ec3e0f87ed1b9b5b707/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/imagepipeline-2.0.0.aar/e80adfec3b0313731ba8081b8c01b192/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/nativeimagetranscoder-2.0.0.aar/900a16f16974d032e45439412fca79df/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-2.0.0.aar/9375d0d58ac1c2ea7b53246a47662e12/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/b2a6044a75867742b77bb8201cf6ca67/AndroidManifest.xml:2:1-13:12
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-glide-4.9.0.aar/1834643064272fad8428418af6d2c22e/AndroidManifest.xml:2:1-12:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-gifdecoder-4.9.0.aar/7857412b56969b248b06edc2720dc098/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.fragment:fragment:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/fragment-1.1.0.aar/e4bfc5846746a694121388ab31c7ffc1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/appcompat-resources-1.1.0.aar/91529bef8a24c1468c875ce70fbd6600/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/drawerlayout-1.0.0.aar/7671268caa3187fc16ab1ca662f340be/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/viewpager-1.0.0.aar/16f3c72befa315b05044dd7efc3a50e7/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0.aar/b4715d2182b8b9e5a47b369de72c923e/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/customview-1.0.0.aar/b1ed5e38b3d1c04ab01a7db0e7490660/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/legacy-support-core-utils-1.0.0.aar/a7226e245201079cb378c4a69a7f1f04/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/395ce164624dd09cb3da753651ffb008/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/loader-1.0.0.aar/bf0749d4bece59eb1d60fb8b32fe93b1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/activity-1.0.0.aar/4c935e47f5ac90c09ff3ad7a8b35904c/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/vectordrawable-animated-1.1.0.aar/cc882d4de86f8fe7f2246f33b88ae2c5/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/vectordrawable-1.1.0.aar/ed4714aa0a65a1bf7b738ae2721e2144/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/026e224e52b0cb2b82da9702d79b109e/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0.aar/6118b7d9629d34f4157d37d0708fbe4a/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/core-1.1.0.aar/daf5046f7f59d945617f9812b12abe02/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/0a4e0fb884ff663cd72a0f9029c57d18/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/cardview-1.0.0.aar/ea889bb62c0b8c99b112e049276d0bec/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/exifinterface-1.0.0.aar/27b24495688f63ebe5cb3a7ac8c13f41/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0.aar/afc0118eb351b10b3cd834f84051ae51/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.0.aar/4e7fb152d40b1cf495f2405a37791cf6/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/documentfile-1.0.0.aar/f2fd5c2bb8037a75f21a347b1e6a6af9/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-1.0.0.aar/3623b5763300282fd801d708e61a498c/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/print-1.0.0.aar/738300a90e66f3018d9361320e7f67c4/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/lifecycle-runtime-2.1.0.aar/42c14c5f43f050c676262a5836a7e335/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.1.0.aar/82411ec493fc04f814c7c45a6b4bb3fa/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/savedstate-1.0.0.aar/00e0724f97044167aea39040ea28145d/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-2.0.0.aar/a69513bfc10274db72078fad82a6e9bf/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0.aar/20514dbb37ca3d4949b76d40a9a31dac/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0.aar/3304d85e5e3c8a9a6327bd89e159cf09/AndroidManifest.xml:17:1-22:12
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:2:1-30:12
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-fbcore-2.0.0.aar/063f4b9e64456432ee48fc9771b84165/AndroidManifest.xml:2:1-9:12
+INJECTED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:1:1-58:12
+INJECTED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:1:1-58:12
+INJECTED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:1:1-58:12
+	package
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:2:5-26
+		INJECTED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:1:1-58:12
+		INJECTED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:1:1-58:12
+		INJECTED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:4:5-67
+MERGED from [:react-native-maps] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [:react-native-maps] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [:expo-file-system] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-67
+MERGED from [:expo-file-system] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-67
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-maps-16.1.0.aar/dd15ef1f629be3ed0a93690c9190e8d9/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-maps-16.1.0.aar/dd15ef1f629be3ed0a93690c9190e8d9/AndroidManifest.xml:24:5-67
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:4:22-64
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:5:5-77
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:5:22-75
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:6:5-80
+MERGED from [:expo-file-system] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:5-80
+MERGED from [:expo-file-system] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:5-80
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:6:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:7:5-81
+MERGED from [:expo-file-system] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-81
+MERGED from [:expo-file-system] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-81
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:7:22-78
+uses-permission#android.permission.MANAGE_DOCUMENTS
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:10:5-75
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:10:22-72
+uses-permission#android.permission.READ_INTERNAL_STORAGE
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:11:5-80
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:11:22-77
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:12:5-75
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:12:22-72
+uses-permission#android.permission.USE_FINGERPRINT
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:13:5-74
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:13:22-71
+uses-permission#android.permission.VIBRATE
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:14:5-66
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:14:22-63
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:15:5-80
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:15:22-77
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:18:5-81
+MERGED from [:react-native-maps] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-81
+MERGED from [:react-native-maps] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-81
+MERGED from [:expo-location] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-81
+MERGED from [:expo-location] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-81
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:12:5-81
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:18:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:19:5-79
+MERGED from [:expo-location] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-79
+MERGED from [:expo-location] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:14:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:19:22-76
+uses-permission#android.permission.CAMERA
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:20:5-65
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:20:22-62
+uses-permission#android.permission.READ_CONTACTS
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:21:5-72
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:21:22-69
+uses-permission#android.permission.READ_CALENDAR
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:22:5-72
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:22:22-69
+uses-permission#android.permission.WRITE_CALENDAR
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:23:5-73
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:23:22-70
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:25:5-71
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:25:22-68
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:27:5-73
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:27:22-70
+application
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:30:5-56:19
+MERGED from [:expo-image-picker] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-23:19
+MERGED from [:expo-image-picker] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-23:19
+MERGED from [com.facebook.react:react-native:0.61.5] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-react-native-0.61.5.aar/d2289207821ea11173f041c981505ed2/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.61.5] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-react-native-0.61.5.aar/d2289207821ea11173f041c981505ed2/AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.material:material:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/material-1.0.0.aar/f82c2e72e16ad996aef4ec9759d193fc/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/material-1.0.0.aar/f82c2e72e16ad996aef4ec9759d193fc/AndroidManifest.xml:22:5-20
+MERGED from [:expo-file-system] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:5-28:19
+MERGED from [:expo-file-system] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:5-28:19
+MERGED from [:expo-location] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-19:19
+MERGED from [:expo-location] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-19:19
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-maps-16.1.0.aar/dd15ef1f629be3ed0a93690c9190e8d9/AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-maps-16.1.0.aar/dd15ef1f629be3ed0a93690c9190e8d9/AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-location-16.0.0.aar/f9cefeb502e817431208d983e3eedd5a/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-location-16.0.0.aar/f9cefeb502e817431208d983e3eedd5a/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.1.0.aar/8d5402d456c18ff69f1cb82476d62a2e/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.1.0.aar/8d5402d456c18ff69f1cb82476d62a2e/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-android-maps-utils-0.5.aar/9adb2e8115974414235b37980707eeb7/AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-android-maps-utils-0.5.aar/9adb2e8115974414235b37980707eeb7/AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/14f3729e7ab397e6a35a7ec27b5f4e89/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/14f3729e7ab397e6a35a7ec27b5f4e89/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-16.0.0.aar/86329ad46a0a655d14fcae9832f6e87b/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-16.0.0.aar/86329ad46a0a655d14fcae9832f6e87b/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.2.0.aar/b1c3013f9c896090cd129fbb599e9ad4/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.2.0.aar/b1c3013f9c896090cd129fbb599e9ad4/AndroidManifest.xml:22:5-26:19
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/b2a6044a75867742b77bb8201cf6ca67/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/b2a6044a75867742b77bb8201cf6ca67/AndroidManifest.xml:11:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-glide-4.9.0.aar/1834643064272fad8428418af6d2c22e/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-glide-4.9.0.aar/1834643064272fad8428418af6d2c22e/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-gifdecoder-4.9.0.aar/7857412b56969b248b06edc2720dc098/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-gifdecoder-4.9.0.aar/7857412b56969b248b06edc2720dc098/AndroidManifest.xml:9:5-20
+MERGED from [androidx.core:core:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/core-1.1.0.aar/daf5046f7f59d945617f9812b12abe02/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/core-1.1.0.aar/daf5046f7f59d945617f9812b12abe02/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.0.aar/4e7fb152d40b1cf495f2405a37791cf6/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.0.aar/4e7fb152d40b1cf495f2405a37791cf6/AndroidManifest.xml:24:5-25:19
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:18:5-28:19
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:18:5-28:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/core-1.1.0.aar/daf5046f7f59d945617f9812b12abe02/AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:32:7-39
+	android:roundIcon
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:34:7-52
+	android:icon
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:33:7-41
+	android:allowBackup
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:35:7-34
+	android:theme
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:36:7-38
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:31:7-38
+meta-data#com.google.android.geo.API_KEY
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:38:7-40:66
+	android:value
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:40:9-64
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:39:9-54
+activity#com.theartofdev.edmodo.cropper.CropImageActivity
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:41:7-44:18
+	android:theme
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:43:9-52
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:42:9-72
+activity#com.rnguide.MainActivity
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:45:7-54:18
+	android:label
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:47:9-41
+	android:windowSoftInputMode
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:49:9-51
+	android:configChanges
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:48:9-79
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:46:9-37
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:50:9-53:25
+action#android.intent.action.MAIN
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:51:13-65
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:51:21-62
+category#android.intent.category.LAUNCHER
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:52:13-73
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:52:23-70
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:55:7-84
+	android:name
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml:55:17-81
+uses-sdk
+INJECTED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml
+MERGED from [:react-native-maps] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-maps] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-screens] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-screens] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-reanimated] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-reanimated] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-permissions] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-permissions/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-permissions] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-permissions/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-image-picker] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-image-picker] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.theartofdev.edmodo:android-image-cropper:2.7.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-android-image-cropper-2.7.0.aar/e8fa88f82e5ac26833b18e229b81e3c9/AndroidManifest.xml:7:5-9:41
+MERGED from [com.theartofdev.edmodo:android-image-cropper:2.7.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-android-image-cropper-2.7.0.aar/e8fa88f82e5ac26833b18e229b81e3c9/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-react-native-adapter] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-react-native-adapter] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/@unimodules/react-native-adapter/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.61.5] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-react-native-0.61.5.aar/d2289207821ea11173f041c981505ed2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.61.5] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-react-native-0.61.5.aar/d2289207821ea11173f041c981505ed2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.material:material:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/material-1.0.0.aar/f82c2e72e16ad996aef4ec9759d193fc/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/material-1.0.0.aar/f82c2e72e16ad996aef4ec9759d193fc/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/appcompat-1.1.0.aar/769d0b56a2a5e3bac9dfd44e8ebd2e17/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/appcompat-1.1.0.aar/769d0b56a2a5e3bac9dfd44e8ebd2e17/AndroidManifest.xml:20:5-22:41
+MERGED from [:expo-app-loader-provider] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-app-loader-provider/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-app-loader-provider] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-app-loader-provider/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-constants] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-constants/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-constants] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-constants/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-error-recovery] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-error-recovery/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-error-recovery] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-error-recovery/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-file-system] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
+MERGED from [:expo-file-system] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-10:41
+MERGED from [:expo-font] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-font/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-font] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-font/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-keep-awake] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-keep-awake/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-keep-awake] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-keep-awake/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-linear-gradient] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-linear-gradient] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-location] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-location] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-sqlite] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-sqlite/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-sqlite] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-sqlite/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-web-browser] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:expo-web-browser] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-web-browser/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-barcode-scanner-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-barcode-scanner-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-barcode-scanner-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-barcode-scanner-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-camera-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-camera-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-camera-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-camera-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-constants-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-constants-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-constants-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-constants-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-face-detector-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-face-detector-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-face-detector-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-face-detector-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-file-system-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-file-system-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-file-system-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-file-system-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-font-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-font-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-font-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-font-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-permissions-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-permissions-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-permissions-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-permissions-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-task-manager-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-task-manager-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-task-manager-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-task-manager-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-core] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/@unimodules/core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-core] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/@unimodules/core/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-image-loader-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-image-loader-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-image-loader-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-image-loader-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-sensors-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-sensors-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:unimodules-sensors-interface] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/unimodules-sensors-interface/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] /home/achliopa/.gradle/caches/transforms-1/files-1.1/android-jsc-r245459.aar/dd4ac182fc8d1755ad9a4253cab5d111/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] /home/achliopa/.gradle/caches/transforms-1/files-1.1/android-jsc-r245459.aar/dd4ac182fc8d1755ad9a4253cab5d111/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-maps-16.1.0.aar/dd15ef1f629be3ed0a93690c9190e8d9/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-maps-16.1.0.aar/dd15ef1f629be3ed0a93690c9190e8d9/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-location-16.0.0.aar/f9cefeb502e817431208d983e3eedd5a/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:16.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-location-16.0.0.aar/f9cefeb502e817431208d983e3eedd5a/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.1.0.aar/8d5402d456c18ff69f1cb82476d62a2e/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.1.0.aar/8d5402d456c18ff69f1cb82476d62a2e/AndroidManifest.xml:20:5-44
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-android-maps-utils-0.5.aar/9adb2e8115974414235b37980707eeb7/AndroidManifest.xml:5:5-43
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-android-maps-utils-0.5.aar/9adb2e8115974414235b37980707eeb7/AndroidManifest.xml:5:5-43
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/14f3729e7ab397e6a35a7ec27b5f4e89/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/14f3729e7ab397e6a35a7ec27b5f4e89/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-16.0.0.aar/86329ad46a0a655d14fcae9832f6e87b/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-16.0.0.aar/86329ad46a0a655d14fcae9832f6e87b/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.2.0.aar/b1c3013f9c896090cd129fbb599e9ad4/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.2.0.aar/b1c3013f9c896090cd129fbb599e9ad4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/legacy-support-v4-1.0.0.aar/890d23dc1fdb43bbf79f838251703574/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/legacy-support-v4-1.0.0.aar/890d23dc1fdb43bbf79f838251703574/AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/browser-1.0.0.aar/bcb336a462299eeb5ae844ba85b1117b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/browser-1.0.0.aar/bcb336a462299eeb5ae844ba85b1117b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/recyclerview-1.0.0.aar/e0c99d14000123e83b891d372c7890eb/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/recyclerview-1.0.0.aar/e0c99d14000123e83b891d372c7890eb/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0.aar/cd993d90525cf5307ccf51abc53c96e7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0.aar/cd993d90525cf5307ccf51abc53c96e7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-1.0.0.aar/c12afa2f95d835164ea09e8e26fe9031/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-1.0.0.aar/c12afa2f95d835164ea09e8e26fe9031/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/transition-1.1.0.aar/1deb9cb22cff2426883da7a7c7c28b5b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/transition-1.1.0.aar/1deb9cb22cff2426883da7a7c7c28b5b/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fresco:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/fresco-2.0.0.aar/1d3a1207fe78f504ee728f321577824f/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/fresco-2.0.0.aar/1d3a1207fe78f504ee728f321577824f/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-2.0.0.aar/bce6b8ae374dcef737e7484b25c5f24f/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-2.0.0.aar/bce6b8ae374dcef737e7484b25c5f24f/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/drawee-2.0.0.aar/985274613fb6c616e424bd1f193618b2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/drawee-2.0.0.aar/985274613fb6c616e424bd1f193618b2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/nativeimagefilters-2.0.0.aar/b6d037fbff0f8ec3e0f87ed1b9b5b707/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/nativeimagefilters-2.0.0.aar/b6d037fbff0f8ec3e0f87ed1b9b5b707/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/imagepipeline-2.0.0.aar/e80adfec3b0313731ba8081b8c01b192/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/imagepipeline-2.0.0.aar/e80adfec3b0313731ba8081b8c01b192/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/nativeimagetranscoder-2.0.0.aar/900a16f16974d032e45439412fca79df/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/nativeimagetranscoder-2.0.0.aar/900a16f16974d032e45439412fca79df/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-2.0.0.aar/9375d0d58ac1c2ea7b53246a47662e12/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-2.0.0.aar/9375d0d58ac1c2ea7b53246a47662e12/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/b2a6044a75867742b77bb8201cf6ca67/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/b2a6044a75867742b77bb8201cf6ca67/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-glide-4.9.0.aar/1834643064272fad8428418af6d2c22e/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-glide-4.9.0.aar/1834643064272fad8428418af6d2c22e/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-gifdecoder-4.9.0.aar/7857412b56969b248b06edc2720dc098/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-gifdecoder-4.9.0.aar/7857412b56969b248b06edc2720dc098/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.fragment:fragment:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/fragment-1.1.0.aar/e4bfc5846746a694121388ab31c7ffc1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/fragment-1.1.0.aar/e4bfc5846746a694121388ab31c7ffc1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/appcompat-resources-1.1.0.aar/91529bef8a24c1468c875ce70fbd6600/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/appcompat-resources-1.1.0.aar/91529bef8a24c1468c875ce70fbd6600/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/drawerlayout-1.0.0.aar/7671268caa3187fc16ab1ca662f340be/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/drawerlayout-1.0.0.aar/7671268caa3187fc16ab1ca662f340be/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/viewpager-1.0.0.aar/16f3c72befa315b05044dd7efc3a50e7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/viewpager-1.0.0.aar/16f3c72befa315b05044dd7efc3a50e7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0.aar/b4715d2182b8b9e5a47b369de72c923e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0.aar/b4715d2182b8b9e5a47b369de72c923e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/customview-1.0.0.aar/b1ed5e38b3d1c04ab01a7db0e7490660/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/customview-1.0.0.aar/b1ed5e38b3d1c04ab01a7db0e7490660/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/legacy-support-core-utils-1.0.0.aar/a7226e245201079cb378c4a69a7f1f04/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/legacy-support-core-utils-1.0.0.aar/a7226e245201079cb378c4a69a7f1f04/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/395ce164624dd09cb3da753651ffb008/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/395ce164624dd09cb3da753651ffb008/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/loader-1.0.0.aar/bf0749d4bece59eb1d60fb8b32fe93b1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/loader-1.0.0.aar/bf0749d4bece59eb1d60fb8b32fe93b1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/activity-1.0.0.aar/4c935e47f5ac90c09ff3ad7a8b35904c/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/activity-1.0.0.aar/4c935e47f5ac90c09ff3ad7a8b35904c/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/vectordrawable-animated-1.1.0.aar/cc882d4de86f8fe7f2246f33b88ae2c5/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/vectordrawable-animated-1.1.0.aar/cc882d4de86f8fe7f2246f33b88ae2c5/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/vectordrawable-1.1.0.aar/ed4714aa0a65a1bf7b738ae2721e2144/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/vectordrawable-1.1.0.aar/ed4714aa0a65a1bf7b738ae2721e2144/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/026e224e52b0cb2b82da9702d79b109e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/026e224e52b0cb2b82da9702d79b109e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0.aar/6118b7d9629d34f4157d37d0708fbe4a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0.aar/6118b7d9629d34f4157d37d0708fbe4a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/core-1.1.0.aar/daf5046f7f59d945617f9812b12abe02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/core-1.1.0.aar/daf5046f7f59d945617f9812b12abe02/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/0a4e0fb884ff663cd72a0f9029c57d18/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/0a4e0fb884ff663cd72a0f9029c57d18/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/cardview-1.0.0.aar/ea889bb62c0b8c99b112e049276d0bec/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/cardview-1.0.0.aar/ea889bb62c0b8c99b112e049276d0bec/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/exifinterface-1.0.0.aar/27b24495688f63ebe5cb3a7ac8c13f41/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/exifinterface-1.0.0.aar/27b24495688f63ebe5cb3a7ac8c13f41/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0.aar/afc0118eb351b10b3cd834f84051ae51/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/interpolator-1.0.0.aar/afc0118eb351b10b3cd834f84051ae51/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.0.aar/4e7fb152d40b1cf495f2405a37791cf6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.0.aar/4e7fb152d40b1cf495f2405a37791cf6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/documentfile-1.0.0.aar/f2fd5c2bb8037a75f21a347b1e6a6af9/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/documentfile-1.0.0.aar/f2fd5c2bb8037a75f21a347b1e6a6af9/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-1.0.0.aar/3623b5763300282fd801d708e61a498c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-1.0.0.aar/3623b5763300282fd801d708e61a498c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/print-1.0.0.aar/738300a90e66f3018d9361320e7f67c4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/print-1.0.0.aar/738300a90e66f3018d9361320e7f67c4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/lifecycle-runtime-2.1.0.aar/42c14c5f43f050c676262a5836a7e335/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/lifecycle-runtime-2.1.0.aar/42c14c5f43f050c676262a5836a7e335/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.1.0.aar/82411ec493fc04f814c7c45a6b4bb3fa/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.1.0.aar/82411ec493fc04f814c7c45a6b4bb3fa/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/savedstate-1.0.0.aar/00e0724f97044167aea39040ea28145d/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/savedstate-1.0.0.aar/00e0724f97044167aea39040ea28145d/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-2.0.0.aar/a69513bfc10274db72078fad82a6e9bf/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-2.0.0.aar/a69513bfc10274db72078fad82a6e9bf/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0.aar/20514dbb37ca3d4949b76d40a9a31dac/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0.aar/20514dbb37ca3d4949b76d40a9a31dac/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0.aar/3304d85e5e3c8a9a6327bd89e159cf09/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0.aar/3304d85e5e3c8a9a6327bd89e159cf09/AndroidManifest.xml:20:5-44
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:8:5-10:41
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:8:5-10:41
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-fbcore-2.0.0.aar/063f4b9e64456432ee48fc9771b84165/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-fbcore-2.0.0.aar/063f4b9e64456432ee48fc9771b84165/AndroidManifest.xml:5:5-7:41
+INJECTED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml
+INJECTED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml
+		ADDED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/android/app/src/main/AndroidManifest.xml
+provider#expo.modules.imagepicker.ImagePickerFileProvider
+ADDED from [:expo-image-picker] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:9-22:20
+	android:grantUriPermissions
+		ADDED from [:expo-image-picker] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-47
+	android:authorities
+		ADDED from [:expo-image-picker] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-75
+	android:exported
+		ADDED from [:expo-image-picker] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-37
+	android:name
+		ADDED from [:expo-image-picker] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-76
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:expo-image-picker] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-21:71
+	android:resource
+		ADDED from [:expo-image-picker] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:17-68
+	android:name
+		ADDED from [:expo-image-picker] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:17-67
+uses-permission#android.permission.STORAGE
+ADDED from [:expo-file-system] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:5-66
+	android:name
+		ADDED from [:expo-file-system] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:22-63
+provider#expo.modules.filesystem.FileSystemFileProvider
+ADDED from [:expo-file-system] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:9-27:20
+	android:grantUriPermissions
+		ADDED from [:expo-file-system] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:13-47
+	android:authorities
+		ADDED from [:expo-file-system] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:20:13-74
+	android:exported
+		ADDED from [:expo-file-system] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:21:13-37
+	tools:replace
+		ADDED from [:expo-file-system] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:23:13-48
+	android:name
+		ADDED from [:expo-file-system] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-file-system/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:13-74
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from [:expo-location] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-77
+	android:name
+		ADDED from [:expo-location] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:22-74
+service#expo.modules.location.services.LocationTaskService
+ADDED from [:expo-location] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:9-18:40
+	android:exported
+		ADDED from [:expo-location] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-37
+	android:name
+		ADDED from [:expo-location] /home/achliopa/workspace/udemy/react_native_2019/myCode/rn-complete-guide-bare/node_modules/expo-location/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-78
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-maps-16.1.0.aar/dd15ef1f629be3ed0a93690c9190e8d9/AndroidManifest.xml:23:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:13:5-79
+MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:13:5-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-maps-16.1.0.aar/dd15ef1f629be3ed0a93690c9190e8d9/AndroidManifest.xml:23:22-76
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-maps-16.1.0.aar/dd15ef1f629be3ed0a93690c9190e8d9/AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-maps-16.1.0.aar/dd15ef1f629be3ed0a93690c9190e8d9/AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-maps-16.1.0.aar/dd15ef1f629be3ed0a93690c9190e8d9/AndroidManifest.xml:28:9-32
+uses-library#org.apache.http.legacy
+ADDED from [com.google.android.gms:play-services-maps:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-maps-16.1.0.aar/dd15ef1f629be3ed0a93690c9190e8d9/AndroidManifest.xml:33:9-35:40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-maps-16.1.0.aar/dd15ef1f629be3ed0a93690c9190e8d9/AndroidManifest.xml:35:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-maps-16.1.0.aar/dd15ef1f629be3ed0a93690c9190e8d9/AndroidManifest.xml:34:13-50
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.1.0.aar/8d5402d456c18ff69f1cb82476d62a2e/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.1.0.aar/8d5402d456c18ff69f1cb82476d62a2e/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.1.0.aar/8d5402d456c18ff69f1cb82476d62a2e/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:16.1.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.1.0.aar/8d5402d456c18ff69f1cb82476d62a2e/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.maps.android:android-maps-utils:0.5] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-android-maps-utils-0.5.aar/9adb2e8115974414235b37980707eeb7/AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.2.0.aar/b1c3013f9c896090cd129fbb599e9ad4/AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.2.0.aar/b1c3013f9c896090cd129fbb599e9ad4/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.maps.android:android-maps-utils:0.5] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-android-maps-utils-0.5.aar/9adb2e8115974414235b37980707eeb7/AndroidManifest.xml:10:13-66
+	android:name
+		ADDED from [com.google.maps.android:android-maps-utils:0.5] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-android-maps-utils-0.5.aar/9adb2e8115974414235b37980707eeb7/AndroidManifest.xml:9:13-58
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:15:5-98
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:15:22-95
+uses-permission#com.google.android.gms.permission.ACTIVITY_RECOGNITION
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:16:5-94
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:16:22-91
+service#io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:19:9-21:40
+	android:exported
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:21:13-37
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:20:13-132
+service#io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:22:9-24:40
+	android:exported
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:24:13-37
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:23:13-127
+service#io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService
+ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:25:9-27:40
+	android:exported
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [io.nlopez.smartlocation:library:3.2.11] /home/achliopa/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/4c8a52e4e0587239375cd075d144b67c/AndroidManifest.xml:26:13-120
