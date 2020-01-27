@@ -1669,4 +1669,59 @@ MapScreen.navigationOptions = navData => {
 
 ### Lecture 246. Displaying the "Details" Screen
 
+* we pass in the new attributesin PlaceItem from PLaceListScreen
+* we flesh out the PlaceDetail Screen
+* we get the Id from navigation where we have set it as param. then we get place from redux state
+
+### Lecture 247. Finishing the "Map" Screen
+
+* we want to interact and view mapin an non editable way. just view
+* we add an onpress handler to MapView in PlaceDetailScreen 
+```
+    const showMapHandler = () => {
+        props.navigation.navigate('Map');
+    };
+```
+* the problem is we get all functionality to mod the location and we dont want that
+* sowe pass in a param to alter behaviour in MapScreen `props.navigation.navigate('Map',{readOnly: true, initialLocation: selectedLocation });`
+* we use the flag param in MapScreen to alter behavior
+
+### Lecture 248. Running the App on iOS
+
+* make sure to test on devices and simulators (or even install expo app on simulators)
+* es we got to set additional permissions to work
+
+## Section 13: Building Apps Without Expo
+
+### Lecture 252. Module Introduction
+
+* expo requires expo client. our app is loaded there
+* to make profit we need to publish it standalone but people will indirectly install the expo client
+* the hidden client sizes up our app and maybe slower... we would ideally would like to get rid of the expo client when w eplan for production
+* or we might want native functionality not included in expo
+
+### Lecture 253. Alternatives to Expo
+
+* Expo - Managed Workflow
+  * Easy to use, zero setup
+  * Lots of buil tin libs
+  * Controlled with Expo CLI
+  * Standalone app ok with expo wrapper
+* Expo - creBare Workflow
+  * created from scratch or by ejecting from Expo
+  * non-expo app
+  * still uses expo packages (some need manual installation, some work as is)
+  * relatively easy to manage and config
+  * can use any native module. even non expo
+  * build and deploy with android studio / xcode
+* React Native CLI
+  * non-expo app
+  * can use expo packages , manual setup required
+  * managed by us
+  * any native module can be used
+  * build and deploy on android studio / xcode
+* to eject from expo we need tomod files using expo packages
+
+### Lecture 254. Building Apps with Just the React Native CLI
+
 * 

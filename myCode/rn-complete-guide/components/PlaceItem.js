@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         borderBottomColor: '#ccc',
         borderBottomWidth: 1,
         paddingVertical: 15,
-        paddingHorizontal: 30,
+        paddingHorizontal: 15,
         flexDirection: 'row',
         alignItems: 'center'
     },
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         borderWidth: 1
     },
     infoContainer: {
-        marginLeft: 25,
+        marginLeft: 20,
         width: 250,
         justifyContent: 'center',
         alignItems: 'flex-start'
@@ -43,8 +43,8 @@ const styles = StyleSheet.create({
         marginBottom: 5
     },
     address: {
-        color: '#666',
-        fontSize: 18
+        color: Colors.primary,
+        fontSize: 12
     }
 });
 
