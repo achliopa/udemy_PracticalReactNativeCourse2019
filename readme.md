@@ -1574,6 +1574,99 @@ const MapScreen = props => {
 ### Lecture 241. Adding a Marker
 
 * we can add interactivity to the MapView passing in an onPress handler
-* onPress event object on map contians a lot of data
+* onPress event object on map contains a lot of data
 * we useState to get the location and place a marker on Map
 * we import Marker from react-native-maps
+* we pass in a config object `<Marker title="Picked Location" coordinate={markerCoordinates}></Marker>`
+
+### Lecture 242. Making the Picked Location "Saveable"
+
+* we want to add a Save button in MapScreen
+* we use navigationOptions
+* at first we want to just goBack to prev screen. we dont use HeaderButton but text wrapped with touchable
+* the code pattern we use is strange and new for us...
+```
+const MapScreen = props => {
+  .......
+      const savePickedLocationHandler = useCallback(() => {
+        props.navigation.goBack();
+    },[]);
+    
+    useEffect(()=>{
+        props.navigation.setParams({saveLocation: savePickedLocationHandler});
+    },[savePickedLocationHandler]);
+  .......
+}
+
+    
+MapScreen.navigationOptions = navData => {
+    const saveFn = navData.navigation.getParam('saveLocation');
+    return {
+        headerRight: (
+            <TouchableOpacity style={styles.headerButton} onPress={saveFn}>
+                <Text style={styles.headerButtonText}>Save</Text>
+            </TouchableOpacity>
+        )
+    };
+};
+```
+* we use useEffect and useCallback to avoid rebuilts to essentially use .goBack()
+* we wan to pass the location from Marker to the NewPlaceScreen when we build the state with the action callback
+* for this we use `props.navigation.navigate('NewPlace,{})` avoiding to push to the stack.. its the same as goBack() but with the ability to pass data through the navigation prop
+```
+    const savePickedLocationHandler = useCallback(() => {
+        if(!selectedLocation) {
+            // could show alert
+            return;  
+        }
+        props.navigation.navigate('NewPlace',{pickedLocation: selectedLocation}); 
+    },[selectedLocation]);
+```
+* note that we pass a dependency in the callback to rebuild and get the new selectedLocation when we have a new one .
+* there is the issue with cleanup mem though.....
+
+### Lecture 243. Storing Picked Places
+
+* in LocationPicker (rendered in NewPlaceScreen) is where we nav to MapScreen....
+* there we extracked the location data from navigation params `const mapPickedLocation = props.navigation.getParam('pickedLocation');`
+* we place in in mapScreen with the navigate(method)
+* we useEffect to pass in the location to state whenever we have a change in the param we get from navigation
+```
+    useEffect(()=>{
+        if(mapPickedLocation){
+            setPickedLocation(mapPickedLocation);
+        }
+    },[mapPickedLocation]);
+```
+
+### Lecture 244. Updating the Location Screen When the Location Changes
+
+* we have the location data in LocationPicker component state... now we can pass it up to the NewPlaceScreen with access to the action creator for redux
+* to pass it upstream  to NewPlaceScreen we use a callback of callback at rerender as we ref it in JSX...
+* we can now store location to state and pass it on to action-creator
+
+### Lecture 245. Storing the Address
+
+* we pass location in redux state db and we want to get a readable address
+* we use another google api for this, geocoding
+* we use the reverse geocong API url to hit passing in coord and our API key
+* we need to enable geocoding API in our app console in Google
+* we do the fetch in the async addPlace action creator
+```
+        const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${
+            location.lat},${
+            location.lng}&key=${
+            ENV.googleApiKey}`);
+            
+        if(!response.ok){
+            throw new Error('Something went wrong!');
+        }
+        
+        const resData = await response.json();
+```
+* we inspect the response and see that we want the formatedAddress object attr
+* we add address and lat lng in reducer, place model, and db fetch in reducer
+
+### Lecture 246. Displaying the "Details" Screen
+
+* 
