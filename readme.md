@@ -1275,3 +1275,9 @@ expo install react-navigation-stack @react-native-community/masked-view
 * we implement a HeaderButton
 
 ### Lecture 227. Getting Started with the Form
+
+* in NewPlaceScreen we build a form using Hooks useState and redux anf thunk
+
+### Lecture 228. Redux & Adding Places
+
+* we add redux in App.js and set /store and reducers and actions js file
