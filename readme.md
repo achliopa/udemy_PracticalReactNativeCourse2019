@@ -1276,8 +1276,308 @@ expo install react-navigation-stack @react-native-community/masked-view
 
 ### Lecture 227. Getting Started with the Form
 
+<<<<<<< HEAD
 * in NewPlaceScreen we build a form using Hooks useState and redux anf thunk
 
 ### Lecture 228. Redux & Adding Places
 
 * we add redux in App.js and set /store and reducers and actions js file
+=======
+* we add redux in app.js
+* we use useDispatch in NewPlaceScreen to add place to state using the addPlace action
+* we add a /models folder with place.js for the Place class 
+
+### Lecture 229. Outputting a List of Places
+
+* we use FlatList and build a new component PlaceItem for FlatList
+* its a standard component. there we programmaticaly go back to detail passing in nav params
+
+### Lecture 230. Accessing the Device Camera
+
+* use expo to make your life easier using native feats
+* Camera package give full access to the Camera flow 
+* if we hust want to get an image we use expo ImagePicker
+* we need to `expo install expo-image-picker` and import it `import * as ImagePicker from 'expo-image-picker`
+* we add a new Component 'ImgPicker' where we add a handler that invokes `ImagePicker.lauchCameraasync()` method
+* we need to give the app permission to use the camera in ios.... in android we get an alert asking or permission
+* we use the expo Permissions package `expo install expo-permissions` and import it `import * as Permissions from 'expo-permissions';`
+* we add a verify permission function function
+```
+    const verifyPermissions = async () => {
+        const result = await Permissions.askAsync(Permissions.CAMERA);
+        if (result.status !== 'granted') {
+            Alert.alert(
+                'Insufficient permissions',
+                'You neet to grant camera permissions to use this app.',
+                [{ text: 'Okay' }]
+            );
+            return false;
+        }
+        return true;
+    };
+```
+* the take image is
+```
+    const takeImageHandler = async () => {
+        const hasPermission = await verifyPermissions();
+        if (!hasPermission){
+            return;
+        }
+        ImagePicker.launchCameraAsync();
+    };
+```
+* we need to reinstall expo app in mobile
+
+### Lecture 231. Configuring the Camera Access
+
+* in lauchCameaAsync() we pass a config object for setting what to do with camera
+* it returns a promise with the image object... with dimensions and the actual image file location
+```
+        const image = await ImagePicker.launchCameraAsync({
+            allowsEditing: true,
+            aspect: [16,9],
+            quality: 0.5
+        });
+
+        setPickedImage(image.uri);
+```
+
+### Lecture 232. Using the Picked Image
+
+* we store the image to he redux state
+* we add it to the model and list
+
+### Lecture 233. Storing the Image on the Filesystem
+
+* we use the FileSystem expo package `expo install expo-file-system`
+* we save to filesystem once we submit the form
+* we will save in action creator using thunk as it is async
+* import `import * as FileSystem from 'expo-file-system';`* FS gives access to cache dir, bundle dir and document dir
+* we get filename from uri, we find the filepath to permanent filesystem
+* we move th file from temp to permanent place
+```
+export const addPlace = (title,image) => {
+    return async dispatch => {
+        const filename = image.split('/').pop();
+        const newPath = FileSystem.documentDirectory + filename;
+        try {
+            await FileSystem.moveAsync({
+                from: image,
+                to: newPath
+            });
+        } catch(err) {
+            console.log(err);
+            throw err;
+        }
+        
+        dispatch ({
+            type: ADD_PLACE,
+            placeData: {
+                title,
+                image
+            }
+        });
+    }
+};
+```
+* image is stored in permanent dir but the state and uri to it not so after relaunch app cannot find it... we need to store state in DB (SQLite)
+
+### Lecture 234. Diving into SQLite for Permanent Data Storage
+
+* expo offers a package for it `expo install expo-sqlite`
+* we add a db.js helper file with db setup logic
+* we connect to the DB (create or attach)
+* we init the DB creating a table
+* we pass in param in an array
+* we set a succes and error callback
+* we wrap the Vanilla JS callback coe in a promise ES2015 style and return it
+```
+import * as SQLite from 'expo-sqlite';
+
+const db = SQLite.openDatabase('places.db');
+
+export const init = () => {
+    const promise = new Promise((resolve,reject) => {
+        db.transaction((tx) => {
+            tx.executeSql('CREATE TABLE IF NOT EXISTS places (id INTEGER PRIMARY KEY NOT NULL, title TEXT NOT NULL, imageUri TEXT NOT NULL, address TEXT NOT NULL, lat REAL NOT NULL, lng REAL NOT NULL);',
+                [],
+                () => { 
+                    resolve();
+                },
+                (_, err) => { 
+                    reject(err);
+                }
+            );
+        });
+    });
+    return promise;
+};
+```
+* in App.js we call the init method
+
+### lecture 235. Storing Data in the Local Database
+
+* we add a method async to insert data to table
+* we avoid sring interpolation on SQL query to avoid SQL attacks. we use the lib pattern with ??? injections that verify our data prior to insert
+```
+export const insertPlace = (title,imageUri,address,lat,lng) => {
+    const promise = new Promise((resolve, reject) => {
+        db.transaction((tx) => {
+            tx.executeSql('INSERT INTO places (title, imageUri, address, lat, lng) VALUES (?,?,?,?,?);',
+                [title,imageUri,address,lat,lng],
+                (_, result) => {
+                    resolve(result);
+                },
+                (_, err) => {
+                    reject(err);
+                }
+            );
+        });
+    });
+    return promise;
+};
+```
+
+* we call the method in addPlace action creator
+
+### Lecture 236. Fetching Data from the Local Database
+
+* we add a fetch data function from the db
+* the only difference is the SQL query 'SELECT * FROM places'
+* we add a new action creator (async)
+* we call the action in PlacesList at launch time (useEffect) using dispatch
+* we add the action to reducer
+
+### Lecture 237. Getting the User Location
+
+* we install expo location `expo install expo-location`
+* we add  a new component 'LocationPicker' for selecting location and add it to NewPlaceScreen
+* we import in picker the location package `import * as Location from 'expo-location';` also we import Permissions from expo to give permission for location tracking `import * as Permissions from 'expo-permissions';`
+* we use the same method verifyPermisisons to give location prrmissions to the app (see Lec 230)
+* we use `Location.getCurrentPositionAsync({ ` which returns
+```
+Object {
+  "coords": Object {
+    "accuracy": 65,
+    "altitude": 143.04806518554688,
+    "altitudeAccuracy": 10,
+    "heading": -1,
+    "latitude": 40.5494264550398,
+    "longitude": 23.050560355812518,
+    "speed": -1,
+  },
+  "timestamp": 1580061073556.993,
+}
+```
+* the location getter is
+```
+ const getLocationHandler = async () => {
+        const hasPermission = await verifyPermissions();
+        if(!hasPermission){
+            return;
+        }
+
+        try {
+            setIsFetching(true);
+            const location = await Location.getCurrentPositionAsync({ 
+                timeout: 5000 
+            });
+            console.log(location)
+            setPickedLocation({
+                lat: location.coords.latitude,
+                lng: location.coords.longitude
+            });
+        } catch(err) {
+            Alert.alert(
+                'Could not fetch location!', 
+                'Please try again later or pick a location on the map.',
+                [{ text: 'Okay' }]
+            )
+        }
+        setIsFetching(false);
+        
+    };
+```
+
+### Lecture 238. Showing a Map Preview of the Location
+
+* google offers an api to show a [static image of a spec location](https://developers.google.com/maps/documentation/maps-static/intro)
+* we send a req to an API passing in an API key and the coordinates
+* if we dont have an activ eproject for our app we create one: Get Started => Select Maps + Places => Continue => Select Project => Set Billing
+* we get our api key and use it in the API url
+* we create a MapPreview component where we hit the backend and get an image that we render. lat lng are passed as props
+```
+const MapPreview = props => {
+    let imagePreviewUrl;
+    if (props.location) {
+        imagePreviewUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${
+        props.location.lat
+        },${props.location.lng
+        }&zoom=14&size=400x200&maptype=roadmap&markers=color:red%7Clabel:A%7C${
+        props.location.lat
+        },${props.location.lng}&key=${ENV.googleApiKey}`;
+    }
+
+    return (
+        <View style={{...styles.mapPreview, ...props.style}}>
+            {props.location ? <Image style={styles.mapImage} source={{ uri: imagePreviewUrl}}/>
+            : props.children }
+        </View>
+    );
+};
+```
+### Lecture 239. More on Environment Variables
+
+* In the previous lecture, we created a basic environment variables file (env.js).
+* This basic file just exports a JS object - but you could get more fancy and for example export different environment variables for your development flow (i.e. for testing/ developing your app) and for production (i.e. for when you publish your app).
+* The special __DEV__ global variable offered by Expo helps you - it's a variable which you can always access anywhere in your Expo-driven React Native project to determine whether you're running this app in development mode or not.
+* Therefore, you could create a more elaborate environment variables file like this one
+```
+const variables = {
+    development: {
+        googleApiKey: 'abc'
+    },
+    production: {
+        googleApiKey: 'xyz'
+    }
+};
+ 
+const getEnvVariables = () => {
+    if (__DEV__) {
+        return variables.development; // return this if in development mode
+    }
+    return variables.production; // otherwise, return this
+};
+ 
+export default getEnvVariables; // export a reference to the function
+```
+
+### Lecture 240. Displaying an Interactive Map
+
+* we want an interactive map in order to scroll to our location
+* expo has it in MapView Package. it is based on 'react-community/react-native-maps' but we install  `expo install react-native-maps` in bare RN apps see docs
+* MapScreen will host the intereactive map
+* we import `import MapView from 'react-native-maps';`
+* we cannot programmaticaly navigate to MapScreen from LocationPicker as we are not in a Navigator Screen
+* to fix this we forward the navigation prop from NewPlaceScreen to Locationpicker `<LocationPicker navigation={props.navigation} />`
+* our MapScreen passing in the region object with location and some required styling 
+```
+const MapScreen = props => {
+    const mapRegion = {
+        latitude: 40.55,
+        longitude: 23.05,
+        latitudeDelta: 0.022,
+        longitudeDelta: 0.0421,
+    }
+    return <MapView style={styles.map} region={mapRegion} />;
+};
+```
+* on iOS the default maps is Apple Maps
+
+### Lecture 241. Adding a Marker
+
+* we can add interactivity to the MapView passing in an onPress handler
+* onPress event object on map contians a lot of data
+* we useState to get the location and place a marker on Map
+* we import Marker from react-native-maps
+>>>>>>> 3988f1d3dbae600b128bdd5b6f418d901fdd12ac
