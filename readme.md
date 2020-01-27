@@ -1276,14 +1276,11 @@ expo install react-navigation-stack @react-native-community/masked-view
 
 ### Lecture 227. Getting Started with the Form
 
-<<<<<<< HEAD
 * in NewPlaceScreen we build a form using Hooks useState and redux anf thunk
 
 ### Lecture 228. Redux & Adding Places
 
 * we add redux in App.js and set /store and reducers and actions js file
-=======
-* we add redux in app.js
 * we use useDispatch in NewPlaceScreen to add place to state using the addPlace action
 * we add a /models folder with place.js for the Place class 
 
@@ -1580,4 +1577,3 @@ const MapScreen = props => {
 * onPress event object on map contians a lot of data
 * we useState to get the location and place a marker on Map
 * we import Marker from react-native-maps
->>>>>>> 3988f1d3dbae600b128bdd5b6f418d901fdd12ac
